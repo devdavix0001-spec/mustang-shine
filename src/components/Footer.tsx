@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
-import logo from "@/assets/mustang-logo.png.asset.json";
+import logo from "@/assets/Mustang_Logo.png";
 import { cities, services, site } from "@/lib/site";
 
 export function Footer() {
@@ -10,7 +10,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-4">
         <div className="lg:col-span-1">
           <img
-            src={logo.url}
+            src={logo}
             alt="Mustang Insulation Services"
             className="h-14 w-auto"
             width={474}

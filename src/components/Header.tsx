@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Menu, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import logo from "@/assets/mustang-logo.png.asset.json";
+import logo from "@/assets/Mustang_Logo.png";
 import { site } from "@/lib/site";
 
 const nav = [
@@ -36,7 +36,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center gap-6 px-5 sm:px-8">
         <Link to="/" className="shrink-0" aria-label={`${site.name} home`}>
           <img
-            src={logo.url}
+            src={logo}
             alt="Mustang Insulation Services"
             className={`w-auto transition-all duration-300 ${scrolled ? "h-9" : "h-12"}`}
             width={474}

@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
+import mustangLogo from "@/assets/Mustang_Logo.png";
 import appCss from "../styles.css?url";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
@@ -93,7 +94,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap",
       },
-      { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "icon", href: mustangLogo, type: "image/png" },
     ],
     scripts: [
       {
