@@ -87,6 +87,33 @@ function ResidentialPage() {
         </div>
       </section>
 
+      <section className="bg-muted py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <Reveal>
+            <p className="eyebrow text-red">What a proper attic upgrade includes</p>
+            <h2 className="mt-4 max-w-3xl text-3xl uppercase sm:text-4xl">
+              The right fix is more than just adding more insulation
+            </h2>
+          </Reveal>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              "Measure the current attic depth, air leaks, and moisture issues before recommending a scope.",
+              "Seal attic penetrations, top plates, and can-light gaps so conditioned air stops leaking out.",
+              "Remove old, damaged or settled material when needed, then re-install to uniform depth and coverage.",
+              "Walk the finished attic with you and explain what was done, what changed, and how it should perform.",
+            ].map((item, i) => (
+              <Reveal key={item} delay={i * 60}>
+                <div className="h-full border border-border bg-background p-6">
+                  <span className="font-display text-3xl text-red">0{i + 1}</span>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{item}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="slash-texture border-y border-ink-line bg-ink py-16 text-white lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[1.2fr_1fr] lg:items-center">
           <Reveal>

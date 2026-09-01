@@ -79,6 +79,17 @@ function ContactPage() {
                   ))}
                 </div>
               </div>
+
+              <div className="mt-8 border-t border-border pt-6">
+                <p className="font-display text-[0.68rem] font-bold tracking-[0.18em] text-foreground uppercase">
+                  What happens next
+                </p>
+                <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
+                  <li>• We review your project details and ask a few quick questions about the building, age, and symptoms.</li>
+                  <li>• If needed, we schedule a site visit to inspect the attic, crawlspace, walls, or commercial envelope.</li>
+                  <li>• You receive a clear scope and quote with no pressure and no gimmicks.</li>
+                </ul>
+              </div>
             </div>
           </Reveal>
         </div>

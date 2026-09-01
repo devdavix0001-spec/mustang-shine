@@ -85,6 +85,33 @@ function CommercialPage() {
         </div>
       </section>
 
+      <section className="bg-muted py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <Reveal>
+            <p className="eyebrow text-red">Commercial process</p>
+            <h2 className="mt-4 max-w-3xl text-3xl uppercase sm:text-4xl">
+              We scope the work around your building, your schedule, and your code requirements
+            </h2>
+          </Reveal>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {[
+              "Walk the building, measure square footage, and determine where thermal loss and air leakage are happening.",
+              "Recommend a product and R-value strategy to match the building type, occupancy, and climate demands.",
+              "Install in phases if needed so production, tenants, or operations are not interrupted.",
+              "Finish with a clear walkthrough and a written scope that explains the materials, coverage, and performance goals.",
+            ].map((item, i) => (
+              <Reveal key={item} delay={i * 60}>
+                <div className="h-full border border-border bg-background p-6">
+                  <span className="font-display text-3xl text-red">0{i + 1}</span>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{item}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="border-y border-border bg-muted py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal>
