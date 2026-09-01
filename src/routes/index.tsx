@@ -5,7 +5,6 @@ import heroAttic from "@/assets/hero-attic.jpg";
 import commercialImg from "@/assets/commercial-metal-building.jpg";
 import residentialImg from "@/assets/residential-home.jpg";
 import { CtaBand } from "@/components/CtaBand";
-import { PromoBanner } from "@/components/PromoBanner";
 import { Reveal } from "@/components/Reveal";
 import { ServiceCard } from "@/components/ServiceCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
@@ -112,8 +111,6 @@ function Index() {
           ))}
         </ul>
       </div>
-
-      <PromoBanner />
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
         <Reveal>

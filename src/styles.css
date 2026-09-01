@@ -140,9 +140,9 @@
 @utility photo-scrim {
   background-image: linear-gradient(
     to bottom,
-    oklch(0.15 0 0 / 55%) 0%,
-    oklch(0.15 0 0 / 60%) 45%,
-    oklch(0.15 0 0 / 88%) 100%
+    oklch(0.15 0 0 / 22%) 0%,
+    oklch(0.15 0 0 / 40%) 38%,
+    oklch(0.15 0 0 / 72%) 100%
   );
 }
 

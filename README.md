@@ -1,12 +1,8 @@
-# Mustang Brand Builder
+# Mustang Insulation Services Website
 
-# Lovable Prompt — Mustang Insulation Services Website
+This is a React + Vite frontend for Mustang Insulation Services, a family-owned residential and commercial insulation contractor serving the Dallas-Fort Worth Metroplex.
 
-Paste everything below into Lovable as your first prompt. Upload `Mustang_Logo.png` (transparent-background PNG, white/red mark for dark backgrounds) as an asset first, and reference it for the header, footer, and favicon.
-
----
-
-Build a modern, high-converting marketing website for **Mustang Insulation Services**, a family-owned residential and commercial insulation contractor serving the Dallas-Fort Worth Metroplex. This should feel like a premium trade-contractor brand — the kind of polish you'd expect from a high-end roofing or HVAC company, not a generic template site.
+It is built as a conversion-focused marketing site with dark premium branding, service pages, and quote-request flows, without any backend integration.
 
 ## Logo asset (uploaded — use exactly as provided)
 

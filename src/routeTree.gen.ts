@@ -10,8 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as CommercialRouteImport } from './routes/commercial'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as ResidentialRouteImport } from './routes/residential'
+import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as ServicesRouteImport } from './routes/services'
 
 const IndexRoute = IndexRouteImport.update({
@@ -19,14 +23,34 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CommercialRoute = CommercialRouteImport.update({
   id: '/commercial',
   path: '/commercial',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ResidentialRoute = ResidentialRouteImport.update({
   id: '/residential',
   path: '/residential',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesRoute = ServicesRouteImport.update({
@@ -37,35 +61,76 @@ const ServicesRoute = ServicesRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/commercial': typeof CommercialRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
   '/residential': typeof ResidentialRoute
+  '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/commercial': typeof CommercialRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
   '/residential': typeof ResidentialRoute
+  '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/commercial': typeof CommercialRoute
+  '/contact': typeof ContactRoute
+  '/gallery': typeof GalleryRoute
   '/residential': typeof ResidentialRoute
+  '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/commercial' | '/residential' | '/services'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/commercial'
+    | '/contact'
+    | '/gallery'
+    | '/residential'
+    | '/reviews'
+    | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/commercial' | '/residential' | '/services'
-  id: '__root__' | '/' | '/commercial' | '/residential' | '/services'
+  to:
+    | '/'
+    | '/about'
+    | '/commercial'
+    | '/contact'
+    | '/gallery'
+    | '/residential'
+    | '/reviews'
+    | '/services'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/commercial'
+    | '/contact'
+    | '/gallery'
+    | '/residential'
+    | '/reviews'
+    | '/services'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   CommercialRoute: typeof CommercialRoute
+  ContactRoute: typeof ContactRoute
+  GalleryRoute: typeof GalleryRoute
   ResidentialRoute: typeof ResidentialRoute
+  ReviewsRoute: typeof ReviewsRoute
   ServicesRoute: typeof ServicesRoute
 }
 
@@ -78,6 +143,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/commercial': {
       id: '/commercial'
       path: '/commercial'
@@ -85,11 +157,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CommercialRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/residential': {
       id: '/residential'
       path: '/residential'
       fullPath: '/residential'
       preLoaderRoute: typeof ResidentialRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services': {
@@ -104,8 +197,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   CommercialRoute: CommercialRoute,
+  ContactRoute: ContactRoute,
+  GalleryRoute: GalleryRoute,
   ResidentialRoute: ResidentialRoute,
+  ReviewsRoute: ReviewsRoute,
   ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport

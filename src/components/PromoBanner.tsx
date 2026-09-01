@@ -2,9 +2,9 @@ import { Link } from "@tanstack/react-router";
 import { Tag } from "lucide-react";
 
 export function PromoBanner({
-  headline = "Seasonal offer: 15% off attic clean-outs + blown-in fiber install",
-  detail = "Limited-time pricing for DFW homeowners. Mention the offer when you request your free estimate.",
-  ctaLabel = "Claim the offer",
+  headline = "Need a straight answer on your insulation project?",
+  detail = "Talk through your attic, crawlspace, or commercial scope and get a clear quote from the Mustang team.",
+  ctaLabel = "Request a Quote",
 }: {
   headline?: string;
   detail?: string;
