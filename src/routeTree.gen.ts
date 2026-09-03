@@ -18,7 +18,7 @@ import { Route as ResidentialRouteImport } from './routes/residential'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as ServiceAreasRouteImport } from './routes/service-areas'
 import { Route as ServicesRouteImport } from './routes/services'
-import { Route as ServicesSlugRouteImport } from './routes/services/$slug'
+import { Route as ServicesSlugRouteImport } from './routes/services.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',

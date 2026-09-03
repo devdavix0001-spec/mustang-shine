@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet, useLocation } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
 import servicesImage from "@/assets/old-site/mustang-project-17.jpg";
@@ -63,6 +63,12 @@ const serviceImages = [
 ];
 
 function ServicesPage() {
+  const location = useLocation();
+
+  if (location.pathname !== "/services") {
+    return <Outlet />;
+  }
+
   return (
     <>
       <PageHero
