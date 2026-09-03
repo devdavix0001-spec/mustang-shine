@@ -1,9 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 
+import project1 from "@/assets/old-site/mustang-project-1.jpg";
 import project2 from "@/assets/old-site/mustang-project-2.jpg";
+import project3 from "@/assets/old-site/mustang-project-3.jpg";
+import project4 from "@/assets/old-site/mustang-project-4.jpg";
 import project5 from "@/assets/old-site/mustang-project-5.jpg";
+import project6 from "@/assets/old-site/mustang-project-6.jpg";
+import project7 from "@/assets/old-site/mustang-project-7.jpg";
 import project8 from "@/assets/old-site/mustang-project-8.jpg";
 import project9 from "@/assets/old-site/mustang-project-9.jpg";
+import project10 from "@/assets/old-site/mustang-project-10.jpg";
+import project11 from "@/assets/old-site/mustang-project-11.jpg";
+import project12 from "@/assets/old-site/mustang-project-12.jpg";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
@@ -30,11 +39,22 @@ export const Route = createFileRoute("/gallery")({
   component: GalleryPage,
 });
 
-const gallery = [
+type Project = {
+  title: string;
+  type: string;
+  category: "Residential" | "Commercial" | "Building performance";
+  images: string[];
+  problem: string;
+  solution: string;
+  result: string;
+};
+
+const projects: Project[] = [
   {
     title: "Arlington Attic Upgrade",
     type: "Residential attic",
-    image: project2,
+    category: "Residential",
+    images: [project2, project3, project4],
     problem: "Thin and uneven attic coverage contributing to summer heat transfer.",
     solution:
       "Attic evaluation, preparation, air sealing, and blown-in fiberglass installed to a consistent final depth.",
@@ -43,7 +63,8 @@ const gallery = [
   {
     title: "Grapevine Commercial Insulation",
     type: "Tenant improvement",
-    image: project9,
+    category: "Commercial",
+    images: [project9, project10, project11],
     problem: "A commercial interior needed a coordinated ceiling and wall insulation scope.",
     solution:
       "Commercial insulation planning around the building schedule and assembly requirements.",
@@ -52,7 +73,8 @@ const gallery = [
   {
     title: "DFW Building Performance",
     type: "Attic preparation",
-    image: project5,
+    category: "Building performance",
+    images: [project5, project6, project7],
     problem:
       "Air leakage and inconsistent insulation can leave rooms uncomfortable and HVAC systems working harder.",
     solution:
@@ -62,7 +84,8 @@ const gallery = [
   {
     title: "Mansfield Home Comfort Upgrade",
     type: "Residential evaluation",
-    image: project8,
+    category: "Residential",
+    images: [project8, project1, project12],
     problem: "Uneven temperatures and an aging insulation system needed a practical next step.",
     solution:
       "Evaluation of existing material, attic access, air leakage, and the home's improvement goals.",
@@ -71,49 +94,89 @@ const gallery = [
 ];
 
 function GalleryPage() {
+  const [activeCategory, setActiveCategory] = useState<"All" | Project["category"]>("All");
+  const visibleProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((project) => project.category === activeCategory);
+
   return (
     <>
       <PageHero
         eyebrow="Projects"
         title="Recent work across homes and commercial jobs"
         body="A quick look at the kinds of projects we handle across North Texas — attics, crawlspaces, warehouses, and building-performance upgrades."
-        image={heroAttic}
+        image={project1}
       />
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
-        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {gallery.map((item, i) => (
+        <div className="flex flex-wrap items-center justify-between gap-5 border-b border-border pb-6">
+          <div>
+            <p className="eyebrow text-red">Project archive</p>
+            <h2 className="mt-4 text-3xl uppercase sm:text-4xl">Work organized by scope</h2>
+          </div>
+          <div className="flex flex-wrap gap-2" role="tablist" aria-label="Project categories">
+            {(["All", "Residential", "Commercial", "Building performance"] as const).map(
+              (category) => (
+                <button
+                  key={category}
+                  type="button"
+                  role="tab"
+                  aria-selected={activeCategory === category}
+                  onClick={() => setActiveCategory(category)}
+                  className={`border px-4 py-2 font-display text-xs font-bold tracking-[0.12em] uppercase transition-colors ${
+                    activeCategory === category
+                      ? "border-red bg-red text-white"
+                      : "border-border text-muted-foreground hover:border-red hover:text-foreground"
+                  }`}
+                >
+                  {category}
+                </button>
+              ),
+            )}
+          </div>
+        </div>
+
+        <div className="mt-10 space-y-10">
+          {visibleProjects.map((item, i) => (
             <Reveal key={item.title} delay={i * 50}>
-              <article className="group overflow-hidden border border-border bg-muted">
-                <img
-                  src={item.image}
-                  alt={`${item.title} - ${item.type} insulation project`}
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                  loading="lazy"
-                />
-                <div className="p-6">
-                  <p className="font-display text-[0.68rem] font-bold tracking-[0.2em] text-red uppercase">
-                    {item.type}
-                  </p>
-                  <h2 className="mt-3 text-xl uppercase">{item.title}</h2>
-                  <dl className="mt-5 space-y-4 text-sm leading-relaxed text-muted-foreground">
+              <article className="overflow-hidden border border-border bg-muted">
+                <div className="grid gap-px bg-border md:grid-cols-3">
+                  {item.images.map((image, imageIndex) => (
+                    <img
+                      key={image}
+                      src={image}
+                      alt={`${item.title} ${imageIndex === 0 ? "project view" : imageIndex === 1 ? "installation view" : "completed work view"}`}
+                      className="aspect-[4/3] w-full bg-background object-cover"
+                      loading={i === 0 ? "eager" : "lazy"}
+                    />
+                  ))}
+                </div>
+                <div className="grid gap-8 p-7 lg:grid-cols-[0.75fr_1.25fr] lg:p-10">
+                  <div>
+                    <p className="font-display text-[0.68rem] font-bold tracking-[0.2em] text-red uppercase">
+                      {item.category} · {item.type}
+                    </p>
+                    <h2 className="mt-3 text-2xl uppercase sm:text-3xl">{item.title}</h2>
+                  </div>
+                  <dl className="grid gap-5 text-sm leading-relaxed text-muted-foreground sm:grid-cols-3">
                     <div>
                       <dt className="font-display text-xs font-bold tracking-[0.12em] text-foreground uppercase">
                         Problem
                       </dt>
-                      <dd className="mt-1">{item.problem}</dd>
+                      <dd className="mt-2">{item.problem}</dd>
                     </div>
                     <div>
                       <dt className="font-display text-xs font-bold tracking-[0.12em] text-foreground uppercase">
                         Solution
                       </dt>
-                      <dd className="mt-1">{item.solution}</dd>
+                      <dd className="mt-2">{item.solution}</dd>
                     </div>
                     <div>
                       <dt className="font-display text-xs font-bold tracking-[0.12em] text-foreground uppercase">
                         Result
                       </dt>
-                      <dd className="mt-1">{item.result}</dd>
+                      <dd className="mt-2">{item.result}</dd>
                     </div>
                   </dl>
                 </div>

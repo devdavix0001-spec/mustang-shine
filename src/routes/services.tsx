@@ -43,7 +43,14 @@ function ServicesPage() {
         title="Twelve ways we tighten up a building"
         body="Every scope below is installed by experienced Mustang crews, quoted clearly, and built around the specific needs of the home or building."
         image={servicesImage}
-      />
+      >
+        <Link
+          to="/contact"
+          className="inline-flex items-center gap-2 bg-red px-7 py-4 font-display text-sm font-bold tracking-[0.14em] text-white uppercase transition-colors hover:bg-red-dark"
+        >
+          Get a Quote <ArrowRight className="size-4" />
+        </Link>
+      </PageHero>
 
       <nav aria-label="Service list" className="border-b border-border bg-muted">
         <ul className="mx-auto flex max-w-7xl flex-wrap gap-x-5 gap-y-2 px-5 py-5 sm:px-8">
@@ -78,20 +85,22 @@ function ServicesPage() {
                 <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
                   {service.blurb}
                 </p>
-                <Link
-                  to="/services/$slug"
-                  params={{ slug: service.slug }}
-                  className="mt-6 inline-flex items-center gap-2 font-display text-[0.7rem] font-bold tracking-[0.14em] text-red uppercase"
-                >
-                  Learn more <ArrowRight className="size-4" />
-                </Link>
+                <div className="mt-6 flex flex-wrap items-center gap-5">
+                  <Link
+                    to="/services/$slug"
+                    params={{ slug: service.slug }}
+                    className="inline-flex items-center gap-2 font-display text-[0.7rem] font-bold tracking-[0.14em] text-red uppercase"
+                  >
+                    Learn more <ArrowRight className="size-4" />
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 border border-foreground px-4 py-2 font-display text-[0.7rem] font-bold tracking-[0.12em] uppercase transition-colors hover:bg-foreground hover:text-background"
+                  >
+                    Get a Quote <ArrowRight className="size-4" />
+                  </Link>
+                </div>
               </div>
-              <Link
-                to="/contact"
-                className="inline-flex w-fit shrink-0 items-center gap-2 border border-foreground px-6 py-3 font-display text-xs font-bold tracking-[0.14em] uppercase transition-colors hover:bg-foreground hover:text-background"
-              >
-                Get a Quote <ArrowRight className="size-4" />
-              </Link>
             </section>
           </Reveal>
         ))}

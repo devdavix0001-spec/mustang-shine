@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 import logo from "@/assets/Mustang_Logo.png";
 import { cities, services, site } from "@/lib/site";
@@ -7,7 +7,7 @@ import { cities, services, site } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="slash-texture border-t border-ink-line bg-ink text-white">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-5">
         <div className="lg:col-span-1">
           <img
             src={logo}
@@ -21,44 +21,6 @@ export function Footer() {
             Locally owned and operated insulation contractor serving Dallas-Fort Worth with
             residential and commercial insulation solutions built around building performance.
           </p>
-          <div className="mt-6 flex gap-3">
-            <a
-              href={site.instagram}
-              aria-label="Instagram"
-              target="_blank"
-              rel="noreferrer"
-              className="grid size-10 place-items-center border border-ink-line transition-colors hover:border-red hover:bg-red"
-            >
-              <Instagram className="size-4" />
-            </a>
-            <a
-              href={site.facebook}
-              aria-label="Facebook"
-              target="_blank"
-              rel="noreferrer"
-              className="grid size-10 place-items-center border border-ink-line transition-colors hover:border-red hover:bg-red"
-            >
-              <Facebook className="size-4" />
-            </a>
-            <a
-              href={site.thumbtack}
-              aria-label="Thumbtack reviews"
-              target="_blank"
-              rel="noreferrer"
-              className="grid size-10 place-items-center border border-ink-line font-display text-[0.55rem] font-bold tracking-[0.08em] transition-colors hover:border-red hover:bg-red"
-            >
-              T
-            </a>
-            <a
-              href={site.nextdoor}
-              aria-label="Nextdoor reviews"
-              target="_blank"
-              rel="noreferrer"
-              className="grid size-10 place-items-center border border-ink-line font-display text-[0.55rem] font-bold tracking-[0.08em] transition-colors hover:border-red hover:bg-red"
-            >
-              N
-            </a>
-          </div>
         </div>
 
         <div>
@@ -66,14 +28,17 @@ export function Footer() {
             Services
           </h2>
           <ul className="mt-5 space-y-2.5 text-sm text-white/60">
-            {services.slice(0, 8).map((s) => (
-              <li key={s.slug}>
-                <Link
-                  to="/services/$slug"
-                  params={{ slug: s.slug }}
-                  className="transition-colors hover:text-white"
-                >
-                  {s.title}
+            {[
+              ["Attic Insulation", "blown-in-attic-insulation"],
+              ["Spray Foam", "spray-foam-insulation"],
+              ["Insulation Removal", "insulation-removal"],
+              ["Commercial Insulation", "metal-building-insulation"],
+              ["Air Sealing", "attic-air-sealing"],
+              ["Radiant Barrier", "radiant-barriers"],
+            ].map(([label, slug]) => (
+              <li key={slug}>
+                <Link to="/services/$slug" params={{ slug }} className="transition-colors hover:text-white">
+                  {label}
                 </Link>
               </li>
             ))}
@@ -82,9 +47,34 @@ export function Footer() {
 
         <div>
           <h2 className="font-display text-xs font-bold tracking-[0.2em] text-white uppercase">
+            Company
+          </h2>
+          <ul className="mt-5 space-y-2.5 text-sm text-white/60">
+            <li>
+              <Link to="/about" className="transition-colors hover:text-white">About</Link>
+            </li>
+            <li>
+              <Link to="/gallery" className="transition-colors hover:text-white">Projects</Link>
+            </li>
+            <li>
+              <Link to="/reviews" className="transition-colors hover:text-white">Reviews</Link>
+            </li>
+            <li>
+              <Link to="/contact" className="transition-colors hover:text-white">Contact</Link>
+            </li>
+            <li>
+              <Link to="/service-areas" className="transition-colors hover:text-white">Service Areas</Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="font-display text-xs font-bold tracking-[0.2em] text-white uppercase">
             Service Area
           </h2>
-          <p className="mt-5 text-sm leading-relaxed text-white/60">{cities.join(" · ")}</p>
+          <p className="mt-5 text-sm leading-relaxed text-white/60">
+            Dallas · Fort Worth · Arlington · Grand Prairie · Mansfield · Other DFW Areas
+          </p>
         </div>
 
         <div>
