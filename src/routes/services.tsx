@@ -41,7 +41,7 @@ function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title="Twelve ways we tighten up a building"
-        body="Every scope below is installed by Mustang employees, quoted transparently, and backed by our lifetime warranty on insulation installs."
+        body="Every scope below is installed by experienced Mustang crews, quoted clearly, and built around the specific needs of the home or building."
         image={heroAttic}
       />
 

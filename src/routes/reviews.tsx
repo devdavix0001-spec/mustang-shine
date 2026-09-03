@@ -74,7 +74,7 @@ function ReviewsPage() {
         <div className="mt-16 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {testimonials.map((review, i) => (
             <Reveal key={`${review.name}-${review.location}`} delay={i * 60}>
-              <TestimonialCard review={review} />
+              <TestimonialCard {...review} />
             </Reveal>
           ))}
         </div>

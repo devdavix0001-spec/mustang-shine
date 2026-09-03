@@ -18,8 +18,8 @@ export function Footer() {
             loading="lazy"
           />
           <p className="mt-6 max-w-xs text-sm leading-relaxed text-white/60">
-            Family owned and operated insulation contractor serving the Dallas-Fort Worth
-            Metroplex. No subs — every technician is a Mustang employee.
+            Locally owned and operated insulation contractor serving the Dallas-Fort Worth
+            Metroplex with residential and commercial installation expertise.
           </p>
           <div className="mt-6 flex gap-3">
             <a

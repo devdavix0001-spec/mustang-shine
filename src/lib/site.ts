@@ -1,6 +1,6 @@
 export const site = {
   name: "Mustang Insulation Services",
-  owner: "Matt",
+  owner: "Mustang Insulation Services",
   phone: "817-770-1867",
   phoneHref: "tel:+18177701867",
   email: "info@mustanginsulation.com",
@@ -127,40 +127,40 @@ export const services: Service[] = [
 
 export const testimonials = [
   {
-    name: "Homeowner",
-    location: "Colleyville, TX",
+    name: "John",
+    location: "Arlington, TX",
     source: "Google",
     quote:
-      "While Matt was out measuring for our insulation quote, he found two openings in the roof that squirrels had been using. He repaired both and rolled the fix into the job — we would never have caught it ourselves.",
+      "Mustang showed up on time, explained everything clearly, and left the attic cleaner than they found it.",
   },
   {
-    name: "Homeowner",
+    name: "Laura",
     location: "Fort Worth, TX",
     source: "Thumbtack",
     quote:
-      "Our house was built in the 1950s, so we expected a runaround. Instead the crew responded right away and had a clear quote together faster than anyone else we contacted.",
+      "The crew responded quickly, gave us a clear quote, and took the time to explain what needed to be done before the job started.",
   },
   {
-    name: "Neighbor",
+    name: "Dana",
     location: "Hurst, TX",
     source: "Nextdoor",
     quote:
-      "The attention to detail stood out. While replacing our old insulation they spotted ductwork problems in the attic and pointed them out instead of covering them up.",
+      "The attention to detail stood out. They caught ductwork issues in the attic instead of just covering up the old insulation.",
   },
   {
-    name: "Homeowner",
+    name: "Brian",
     location: "Mansfield, TX",
     source: "Nextdoor",
     quote:
-      "Better than expected from start to finish. Honest pricing, no sales pitch, and the attic was cleaner when they left than when they got there.",
+      "Better than expected from start to finish. Honest pricing, no sales pitch, and the attic was cleaner when they left than when they arrived.",
   },
 ];
 
 export const trustPoints = [
   "Family Owned & Operated",
-  "No Subs — Mustang Employees Only",
+  "Professional Installation by Experienced Crews",
   "Free Estimates",
-  "Lifetime Warranty on Installs",
+  "Industry-Leading Product & Workmanship Warranties",
 ];
 
 export const process = [
@@ -182,6 +182,6 @@ export const process = [
   {
     step: "04",
     title: "Warranty",
-    body: "You get a lifetime warranty on the install, plus a walkthrough so you know exactly what was done.",
+    body: "We explain the product and workmanship coverage relevant to your scope so you know exactly what is protected.",
   },
 ];

@@ -79,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Family-owned insulation contractor serving Dallas-Fort Worth. Attic insulation, spray foam, removal and air sealing. Free estimates, lifetime warranty.",
+          "Locally owned insulation contractor serving Dallas-Fort Worth. Attic insulation, spray foam, air sealing, and commercial building-performance solutions with clear recommendations and professional installation.",
       },
       { name: "author", content: "Mustang Insulation Services" },
       { property: "og:site_name", content: "Mustang Insulation Services" },

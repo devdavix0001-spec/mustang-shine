@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Mustang Insulation Services installs attic, spray foam and batt insulation across DFW. Family owned, no subs, free estimates and a lifetime warranty. Call 817-770-1867.",
+          "Mustang Insulation Services provides residential and commercial insulation, spray foam, air sealing, and attic upgrades across Dallas-Fort Worth. Call 817-770-1867.",
       },
       {
         property: "og:title",
@@ -26,7 +26,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "DFW's trusted insulation contractor. Attic insulation, spray foam, removal and air sealing with free estimates and a lifetime warranty.",
+          "DFW insulation contractor for homes and commercial buildings. Attic upgrades, spray foam, air sealing, and building-performance solutions designed to improve comfort and efficiency.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -38,23 +38,23 @@ export const Route = createFileRoute("/")({
 const why = [
   {
     icon: Users,
-    title: "No Subs, Ever",
-    body: "Every technician on your property is a Mustang employee — trained by us, accountable to us.",
+    title: "Experienced Crews",
+    body: "Our team installs the work with the care, consistency, and accountability you expect from a professional contractor.",
   },
   {
     icon: ShieldCheck,
-    title: "Lifetime Warranty",
-    body: "Our insulation installs carry a lifetime warranty. We stand behind the depth and coverage we quote.",
+    title: "Product & Workmanship Warranties",
+    body: "We explain the applicable product and installation coverage for your scope so you know exactly what is protected.",
   },
   {
     icon: CheckCircle2,
-    title: "Transparent Pricing",
-    body: "Best-rate quotes in writing with no sales gimmicks, no bait-and-switch and no pressure to sign.",
+    title: "Straightforward Recommendations",
+    body: "We measure the actual building envelope, discuss options clearly, and recommend what makes sense for your property and budget.",
   },
   {
     icon: Home,
     title: "Local & Family Owned",
-    body: "Owner Matt is on job sites across the Metroplex. You get a neighbor, not a call center.",
+    body: "Mustang is a locally owned company focused on quality workmanship, clear communication, and long-term customer relationships.",
   },
 ];
 
@@ -74,12 +74,12 @@ function Index() {
         <div className="relative mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-36">
           <p className="eyebrow text-red">Arlington · Fort Worth · Dallas</p>
           <h1 className="mt-6 max-w-4xl text-4xl leading-[1.02] text-white uppercase sm:text-5xl lg:text-6xl">
-            DFW's Trusted Insulation Contractor
+            Smarter insulation.<br />
+            Better-performing spaces.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
-            Attic insulation, spray foam, removal and air sealing done right the first time.
-            Family owned, <span className="font-semibold text-red">no subcontractors</span>, and
-            a lifetime warranty on every install.
+            Residential and commercial insulation solutions engineered for comfort, efficiency,
+            and long-term building performance across Dallas-Fort Worth.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <Link
@@ -158,8 +158,8 @@ function Index() {
               <Home className="size-7 text-red" strokeWidth={2.5} />
               <h3 className="mt-4 text-2xl text-white uppercase">Residential</h3>
               <p className="mt-3 max-w-md text-sm leading-relaxed text-white/75">
-                Attics, walls, crawlspaces and pier-and-beam homes. Lower bills, fewer hot
-                rooms, and R-41 attic depth recommended for the DFW climate.
+                Attics, walls, crawlspaces, and pier-and-beam homes. We evaluate the home,
+                air leakage, and insulation condition before recommending the right approach.
               </p>
               <Link
                 to="/residential"
@@ -203,7 +203,7 @@ function Index() {
           <Reveal>
             <p className="eyebrow text-red">Why Mustang</p>
             <h2 className="mt-4 max-w-3xl text-3xl leading-tight text-white uppercase sm:text-4xl">
-              Trust the #1 insulation company in North Texas
+              Building better spaces across DFW
             </h2>
           </Reveal>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -217,6 +217,23 @@ function Index() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="bg-muted py-20 lg:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <Reveal>
+            <p className="eyebrow text-red">Mustang brand statement</p>
+            <h2 className="mt-4 max-w-4xl text-3xl uppercase sm:text-4xl">
+              Not your typical insulation company.
+            </h2>
+            <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
+              Better processes. Better communication. Better workmanship. Better-performing
+              spaces. Mustang combines experienced crews, modern tools, and practical
+              recommendations to design insulation systems around the building instead of the
+              lowest-cost shortcut.
+            </p>
+          </Reveal>
         </div>
       </section>
 

@@ -12,13 +12,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Meet Matt and the Mustang team — family-owned insulation contractors serving Dallas-Fort Worth with honest pricing, no subcontractors, and a lifetime warranty.",
+          "Mustang Insulation Services is a locally owned DFW insulation company focused on professionalism, quality workmanship, and building-performance solutions for residential and commercial properties.",
       },
       { property: "og:title", content: "About Mustang Insulation | Family-Owned DFW Contractor" },
       {
         property: "og:description",
         content:
-          "Learn about the Mustang difference — family-owned, no subs, transparent quotes, and insulation work that stands behind itself.",
+          "Learn about the Mustang difference — local ownership, clear communication, and insulation work built around the building and the customer.",
       },
       { property: "og:url", content: "/about" },
     ],
@@ -29,8 +29,8 @@ export const Route = createFileRoute("/about")({
 
 const values = [
   "Straight answers from the first walkthrough to the final cleanup.",
-  "No subcontractors — every tech is a Mustang employee.",
-  "We install the right depth, then stand behind it with a lifetime warranty.",
+  "Professional crews with a focus on detail, accountability, and clean job sites.",
+  "Insulation systems recommended based on the home, building, and performance goals.",
   "Residential and commercial work, handled with the same standard.",
 ];
 
@@ -40,7 +40,7 @@ function AboutPage() {
       <PageHero
         eyebrow="About"
         title="Built on service, accountability, and real workmanship"
-        body="Matt started Mustang Insulation to do things the right way: honest estimates, respectful crews, and insulation work that solves the problem instead of covering it up."
+        body="Mustang Insulation Services is a locally owned company focused on honest recommendations, respectful crews, and insulation work that solves the underlying problem instead of just covering it up."
         image={heroAttic}
       />
 
@@ -52,15 +52,14 @@ function AboutPage() {
               A local contractor that shows up and does the work
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              Mustang Insulation Services is a family-owned business serving Dallas-Fort Worth,
-              from older homes with air leaks and poor attic depth to warehouses and metal buildings
-              with big-scope insulation needs. We keep it simple: listen, measure, explain the
-              problem, and install it the way it should be done.
+              Mustang Insulation Services is a locally owned business serving Dallas-Fort Worth,
+              from older homes with air leaks and undersized attic insulation to warehouses and
+              metal buildings with larger-scale building-performance needs. We keep it simple:
+              listen, measure, explain the problem, and install the right system for the job.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              We do not use sales gimmicks. We do not hand off pricing to a rotating cast of
-              subcontractors. We do the work with our own employees, keep the communication clear,
-              and leave your property cleaner than we found it.
+              We do not rely on sales gimmicks or inflated promises. We communicate clearly,
+              give practical recommendations, and leave your property cleaner than we found it.
             </p>
           </Reveal>
 
@@ -117,10 +116,10 @@ function AboutPage() {
             <Reveal delay={160}>
               <div className="h-full border border-border bg-background p-7">
                 <p className="font-display text-xs font-bold tracking-[0.18em] text-red uppercase">
-                  Lifetime warranty
+                  Product and workmanship coverage
                 </p>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                  We stand behind our installs. If the job is built correctly, it stays built correctly.
+                  We explain the warranty guidance relevant to the product and system so you know what is covered and why.
                 </p>
               </div>
             </Reveal>

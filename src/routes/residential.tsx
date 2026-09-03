@@ -15,7 +15,7 @@ export const Route = createFileRoute("/residential")({
       {
         name: "description",
         content:
-          "Home attic insulation, air sealing, removal and crawlspace insulation across Dallas-Fort Worth. R-41 attic guidance, free estimates, lifetime warranty.",
+          "Home attic insulation, air sealing, removal, and crawlspace solutions across Dallas-Fort Worth. We recommend insulation systems based on the home, existing materials, and local code needs.",
       },
       { property: "og:title", content: "Residential Attic Insulation DFW | Mustang Insulation" },
       {
@@ -117,36 +117,46 @@ function ResidentialPage() {
       <section className="slash-texture border-y border-ink-line bg-ink py-16 text-white lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[1.2fr_1fr] lg:items-center">
           <Reveal>
-            <p className="eyebrow text-red">R-Value Guidance</p>
+            <p className="eyebrow text-red">Common attic upgrade levels</p>
             <h2 className="mt-4 text-3xl text-white uppercase sm:text-4xl">
-              For DFW attics, we recommend R-41 — about 14 inches
+              Attic targets vary by home, roof system, and existing conditions
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/70">
-              North Texas summers push attic temperatures well past 130°F. Most homes we open up
-              are sitting at half the insulation they need, often settled, displaced by
-              contractors, or damaged by pests. We measure what's actually there, air seal
-              first, then bring the attic up to current standards with eco-friendly products.
+              Typical upgrade levels we see in DFW homes include R-38, R-44, R-49, and R-60,
+              with approximate insulation depths that vary based on the product and the attic
+              configuration. Final recommendations depend on the existing insulation, the roof
+              and framing assembly, local code requirements, and the condition of the home.
+            </p>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/70">
+              Mustang evaluates each attic before recommending a system. We look at what is
+              already there, where air is leaking, and what will improve performance without
+              overbuilding the space.
             </p>
           </Reveal>
           <Reveal delay={80}>
             <dl className="border border-ink-line bg-ink-soft p-8">
               <div className="border-b border-ink-line pb-5">
                 <dt className="font-display text-xs font-bold tracking-[0.18em] text-white/50 uppercase">
-                  Recommended attic R-value
+                  Typical target ranges
                 </dt>
-                <dd className="mt-2 font-display text-4xl text-white">R-41</dd>
+                <dd className="mt-2 font-display text-3xl text-white">R-38 · R-44 · R-49 · R-60</dd>
               </div>
               <div className="border-b border-ink-line py-5">
                 <dt className="font-display text-xs font-bold tracking-[0.18em] text-white/50 uppercase">
-                  Approximate depth
+                  Final recommendation
                 </dt>
-                <dd className="mt-2 font-display text-4xl text-white">14&quot;</dd>
+                <dd className="mt-2 text-sm leading-relaxed text-white/70">
+                  Depends on the existing insulation, attic layout, product selected, local code,
+                  and the condition of the home.
+                </dd>
               </div>
               <div className="pt-5">
                 <dt className="font-display text-xs font-bold tracking-[0.18em] text-white/50 uppercase">
-                  Warranty on installs
+                  Warranty guidance
                 </dt>
-                <dd className="mt-2 font-display text-4xl text-white">Lifetime</dd>
+                <dd className="mt-2 text-sm leading-relaxed text-white/70">
+                  Product and workmanship coverage varies by system and installation scope.
+                </dd>
               </div>
             </dl>
           </Reveal>

@@ -61,7 +61,7 @@ function CommercialPage() {
       <PageHero
         eyebrow="Commercial"
         title="Metal building & warehouse insulation"
-        body="Insulation built for the scale, schedule and code requirements of commercial property. Our employees do the work — never a rotating cast of subs."
+        body="Insulation built for the scale, schedule, and code requirements of commercial property. Our crews work around your building, your timeline, and your performance goals."
         image={commercialImg}
       />
 
