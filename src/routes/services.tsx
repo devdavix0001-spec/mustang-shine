@@ -2,6 +2,18 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
 import servicesImage from "@/assets/old-site/mustang-project-17.jpg";
+import project1 from "@/assets/old-site/mustang-project-1.jpg";
+import project2 from "@/assets/old-site/mustang-project-2.jpg";
+import project3 from "@/assets/old-site/mustang-project-3.jpg";
+import project4 from "@/assets/old-site/mustang-project-4.jpg";
+import project5 from "@/assets/old-site/mustang-project-5.jpg";
+import project6 from "@/assets/old-site/mustang-project-6.jpg";
+import project7 from "@/assets/old-site/mustang-project-7.jpg";
+import project8 from "@/assets/old-site/mustang-project-8.jpg";
+import project9 from "@/assets/old-site/mustang-project-9.jpg";
+import project10 from "@/assets/old-site/mustang-project-10.jpg";
+import project11 from "@/assets/old-site/mustang-project-11.jpg";
+import project12 from "@/assets/old-site/mustang-project-12.jpg";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
@@ -35,6 +47,21 @@ const trackLabel: Record<string, string> = {
   both: "Residential & Commercial",
 };
 
+const serviceImages = [
+  project2,
+  project3,
+  project1,
+  project4,
+  project5,
+  project6,
+  project7,
+  project8,
+  project9,
+  project10,
+  project11,
+  project12,
+];
+
 function ServicesPage() {
   return (
     <>
@@ -44,21 +71,6 @@ function ServicesPage() {
         body="Every scope below is installed by experienced Mustang crews, quoted clearly, and built around the specific needs of the home or building."
         image={servicesImage}
       />
-
-      <nav aria-label="Service list" className="border-b border-border bg-muted">
-        <ul className="mx-auto flex max-w-7xl flex-wrap gap-x-5 gap-y-2 px-5 py-5 sm:px-8">
-          {services.map((s) => (
-            <li key={s.slug}>
-              <a
-                href={`#${s.slug}`}
-                className="link-underline font-display text-xs font-bold tracking-[0.12em] text-muted-foreground uppercase hover:text-foreground"
-              >
-                {s.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
 
       <div className="mx-auto grid max-w-7xl gap-5 px-5 py-16 sm:px-8 md:grid-cols-2 lg:grid-cols-3 lg:py-20">
         {services.map((service, i) => (
@@ -75,6 +87,12 @@ function ServicesPage() {
                   {trackLabel[service.track]}
                 </p>
               </div>
+              <img
+                src={serviceImages[i]}
+                alt={`${service.title} installation project by Mustang Insulation Services`}
+                className="mt-7 aspect-[16/9] w-full object-cover"
+                loading={i < 3 ? "eager" : "lazy"}
+              />
               <h2 className="mt-8 text-2xl uppercase">{service.title}</h2>
               <div className="mt-4 h-0.5 w-10 bg-red" />
               <p className="mt-5 flex-1 text-sm leading-relaxed text-muted-foreground">

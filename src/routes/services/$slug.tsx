@@ -32,6 +32,21 @@ const serviceImages: Record<string, string> = {
   "fire-protective-coatings": project12,
 };
 
+const serviceImageSets: Record<string, string[]> = {
+  "blown-in-attic-insulation": [project2, project3, project4],
+  "fiberglass-batt-insulation": [project3, project6, project8],
+  "spray-foam-insulation": [project1, project5, project7],
+  "insulation-removal": [project4, project11, project12],
+  "attic-air-sealing": [project5, project7, project2],
+  "radiant-barriers": [project6, project10, project3],
+  "attic-encapsulation": [project7, project1, project5],
+  "crawlspace-insulation": [project8, project11, project4],
+  "metal-building-insulation": [project9, project10, project12],
+  soundproofing: [project10, project6, project9],
+  "rodent-exclusion": [project11, project4, project8],
+  "fire-protective-coatings": [project12, project9, project1],
+};
+
 export const Route = createFileRoute("/services/$slug")({
   head: ({ params }) => {
     const service = services.find((item) => item.slug === params.slug);
@@ -84,6 +99,7 @@ function ServiceDetailPage() {
   }
 
   const detail = serviceDetails[service.slug] ?? serviceDetails["blown-in-attic-insulation"]!;
+  const images = serviceImageSets[service.slug] ?? [project1, project2, project3];
 
   const related = services.filter((item) => item.slug !== service.slug).slice(0, 3);
 
@@ -116,12 +132,25 @@ function ServiceDetailPage() {
       </PageHero>
 
       <section className="mx-auto max-w-7xl px-5 pt-10 sm:px-8 lg:pt-14">
-        <img
-          src={serviceImages[service.slug] ?? project1}
-          alt={`${service.title} installation project by Mustang Insulation Services`}
-          className="aspect-[16/7] w-full object-cover"
-          loading="lazy"
-        />
+        <div className="grid gap-3 md:grid-cols-[1.45fr_0.78fr]">
+          <img
+            src={images[0]}
+            alt={`${service.title} project view by Mustang Insulation Services`}
+            className="aspect-[16/9] h-full w-full object-cover"
+            loading="lazy"
+          />
+          <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-1">
+            {images.slice(1).map((image, index) => (
+              <img
+                key={image}
+                src={image}
+                alt={`${service.title} ${index === 0 ? "installation detail" : "completed work"} by Mustang Insulation Services`}
+                className="aspect-[16/9] h-full w-full object-cover"
+                loading="lazy"
+              />
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
