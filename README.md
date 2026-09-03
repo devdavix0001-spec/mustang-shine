@@ -31,11 +31,11 @@ It is built as a conversion-focused marketing site with dark premium branding, s
 ## Business facts to use verbatim
 
 - **Name**: Mustang Insulation Services
-- **Owner**: Matt (family-owned and operated; "No subs — all our employees are Mustang employees")
+- **Ownership language**: Family-owned and locally operated. Do not identify a former owner.
 - **Phone**: 817-770-1867
 - **Email**: info@mustanginsulation.com
 - **Service area**: Dallas-Fort Worth Metroplex — Arlington, Fort Worth, Dallas, Grand Prairie, Mansfield, Hurst, Euless, Bedford, North Richland Hills, Grapevine, Colleyville, Forney, Keller, Southlake, Trophy Club, Denton County, Dallas County
-- **Socials**: Instagram (@mustanginsulationservices), Facebook, Thumbtack (Top Pro), Nextdoor (Hurst, TX)
+- **Socials**: Instagram (@mustanginsulationservices), Facebook, Thumbtack, Nextdoor
 
 ## Services to feature (from brand guideline + existing business)
 
@@ -59,25 +59,27 @@ Split the site into two clear tracks: **Residential** and **Commercial**, matchi
 Straightforward, local, no-nonsense trade-contractor voice. Confident but not corporate. Emphasizes: family-owned, honest/transparent pricing, no sales gimmicks, no subcontractors, free estimates, lifetime warranty on installs, energy-efficiency and comfort benefits, fast responsiveness. Real customer language to echo: "unmatched customer service with quality work," "transparent best rate quotes," "no sales gimmicks," "Trust the #1 insulation company in North Texas."
 
 Sample proof points to weave into copy:
+
 - Free estimates and evaluations, every time
-- Lifetime warranty on insulation installs
-- Family owned and operated — every technician is a Mustang employee, never a sub
+- Industry-leading product and workmanship warranties, explained by service
+- Professional installation by experienced crews
 - Eco-friendly products meeting current insulation standards
-- Recommend bringing attic insulation up to R-41 (14 inches) for DFW climate
-- Seasonal offers (e.g., "15% off attic clean-outs + blown-in fiber install") — build a reusable promo banner component for these
+- Final attic recommendations depend on existing insulation, product, assembly, and code
 
 ## Pages / structure
 
 1. **Home**
-   - Hero: full-bleed dark photo of a technician/attic work or the truck wrap, dark overlay, H1 like "DFW's Trusted Insulation Contractor" + red-accented subhead, primary CTA button "Get a Free Estimate" (red fill, white text) and secondary CTA "Call 817-770-1867"
-   - Trust bar: family-owned · no subs · free estimates · lifetime warranty
-   - Services grid (icon + short label, linking to service detail sections/pages)
-   - "Residential vs Commercial" split section with two CTAs
-   - Why Mustang section (3–4 differentiators as cards)
-   - Service area map/list (cities served)
-   - Testimonials carousel (use paraphrased versions of real reviews below — do not quote verbatim)
-   - Before/after or process section: Inspect → Quote → Install → Warranty
-   - Final CTA band (red background, white text, phone + form)
+
+- Hero: full-bleed dark photo of a technician/attic work or the truck wrap, dark overlay, H1 like "Smarter Insulation. Better-Performing Spaces." + red-accented subhead, primary CTA button "Get an Estimate" and secondary CTA "Call Mustang"
+- Trust bar: locally owned · residential + commercial · professional installation · free estimates
+- Services grid (icon + short label, linking to service detail sections/pages)
+- "Residential vs Commercial" split section with two CTAs
+- Why Mustang section (3–4 differentiators as cards)
+- Service area map/list (cities served)
+- Testimonials carousel (use paraphrased versions of real reviews below — do not quote verbatim)
+- Before/after or process section: Inspect → Quote → Install → Warranty
+- Final CTA band (red background, white text, phone + form)
+
 2. **Residential** — services list, attic focus, comfort/energy-bill messaging, R-value guidance
 3. **Commercial** — metal building/warehouse insulation, soundproofing, larger-scale project framing, request-a-quote form
 4. **Services** (or individual service sub-pages/anchors) for each of the 12 services listed above, each with a short description and a "Get a Quote" CTA
@@ -123,19 +125,7 @@ Sample proof points to weave into copy:
 - Accessible color contrast (verify red-on-black and white-on-black meet WCAG AA for text)
 - Placeholder/stock construction and attic-insulation photography until real photos are uploaded (dark-toned treatment to match brand)
 
-Build this as a clean, professional, conversion-focused site — the goal is homeowners and commercial property managers landing on it and immediately trusting Mustang enough to request a free estimate.  https://www.mustanginsulationtx.com/ you can draw texxt copy detials from their old websiote too i want ti standadra and professional . i want you to use react vite so the and it just only the frontned pages i want no backed conecctions
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://mustang-shine.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/8137c883-88b7-4777-b00a-d6a61ad8c1b4).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+Build this as a clean, professional, conversion-focused site — the goal is homeowners and commercial property managers landing on it and immediately trusting Mustang enough to request a free estimate. https://www.mustanginsulationtx.com/ you can draw texxt copy detials from their old websiote too i want ti standadra and professional . i want you to use react vite so the and it just only the frontned pages i want no backed conecctions
 
 ## Development
 

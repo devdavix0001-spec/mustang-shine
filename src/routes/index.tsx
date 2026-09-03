@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Building2, CheckCircle2, Home, Phone, ShieldCheck, Users } from "lucide-react";
 
-import heroAttic from "@/assets/hero-attic.jpg";
-import commercialImg from "@/assets/commercial-metal-building.jpg";
-import residentialImg from "@/assets/residential-home.jpg";
+import project1 from "@/assets/old-site/mustang-project-1.jpg";
+import project20 from "@/assets/old-site/mustang-project-20.jpg";
+import project21 from "@/assets/old-site/mustang-project-21.jpg";
 import { CtaBand } from "@/components/CtaBand";
 import { Reveal } from "@/components/Reveal";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -59,11 +59,19 @@ const why = [
 ];
 
 function Index() {
+  const featuredServices = [
+    services.find((service) => service.slug === "blown-in-attic-insulation"),
+    services.find((service) => service.slug === "spray-foam-insulation"),
+    services.find((service) => service.slug === "attic-air-sealing"),
+    services.find((service) => service.slug === "metal-building-insulation"),
+    services.find((service) => service.slug === "insulation-removal"),
+  ].filter(Boolean) as typeof services;
+
   return (
     <>
       <section className="relative isolate overflow-hidden bg-ink">
         <img
-          src={heroAttic}
+          src={project1}
           alt="Mustang Insulation technician installing blown-in attic insulation in a DFW home"
           className="absolute inset-0 size-full object-cover"
           width={1920}
@@ -73,13 +81,14 @@ function Index() {
         <div className="slash-texture absolute inset-0" />
         <div className="relative mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-36">
           <p className="eyebrow text-red">Arlington · Fort Worth · Dallas</p>
-          <h1 className="mt-6 max-w-4xl text-4xl leading-[1.02] text-white uppercase sm:text-5xl lg:text-6xl">
-            Smarter insulation.<br />
+          <h1 className="mt-6 max-w-4xl text-5xl leading-[1.02] text-white uppercase sm:text-6xl lg:text-7xl">
+            Smarter insulation.
+            <br />
             Better-performing spaces.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
-            Residential and commercial insulation solutions engineered for comfort, efficiency,
-            and long-term building performance across Dallas-Fort Worth.
+            Residential and commercial insulation solutions engineered for comfort, efficiency, and
+            long-term building performance across Dallas-Fort Worth.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <Link
@@ -119,13 +128,13 @@ function Index() {
             Insulation services for homes and commercial buildings
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            From a single hot upstairs bedroom to a 40,000 sq ft metal building, we scope it,
-            price it honestly, and install it with our own crews.
+            From a single hot upstairs bedroom to a 40,000 sq ft metal building, we scope it, price
+            it honestly, and install it with our own crews.
           </p>
         </Reveal>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {services.slice(0, 9).map((service, i) => (
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {featuredServices.map((service, i) => (
             <Reveal key={service.slug} delay={i * 50}>
               <ServiceCard service={service} />
             </Reveal>
@@ -146,9 +155,9 @@ function Index() {
         <div className="mx-auto grid max-w-7xl gap-6 px-5 sm:px-8 lg:grid-cols-2">
           <Reveal className="group relative isolate overflow-hidden">
             <img
-              src={residentialImg}
+              src={project20}
               alt="Residential home in the Dallas-Fort Worth area at dusk"
-              className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="absolute inset-0 size-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
               loading="lazy"
               width={1600}
               height={1000}
@@ -158,8 +167,8 @@ function Index() {
               <Home className="size-7 text-red" strokeWidth={2.5} />
               <h3 className="mt-4 text-2xl text-white uppercase">Residential</h3>
               <p className="mt-3 max-w-md text-sm leading-relaxed text-white/75">
-                Attics, walls, crawlspaces, and pier-and-beam homes. We evaluate the home,
-                air leakage, and insulation condition before recommending the right approach.
+                Attics, walls, crawlspaces, and pier-and-beam homes. We evaluate the home, air
+                leakage, and insulation condition before recommending the right approach.
               </p>
               <Link
                 to="/residential"
@@ -172,9 +181,9 @@ function Index() {
 
           <Reveal delay={80} className="group relative isolate overflow-hidden">
             <img
-              src={commercialImg}
+              src={project21}
               alt="Metal warehouse building insulated with spray foam and batt insulation"
-              className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="absolute inset-0 size-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
               loading="lazy"
               width={1600}
               height={1000}
@@ -228,10 +237,9 @@ function Index() {
               Not your typical insulation company.
             </h2>
             <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
-              Better processes. Better communication. Better workmanship. Better-performing
-              spaces. Mustang combines experienced crews, modern tools, and practical
-              recommendations to design insulation systems around the building instead of the
-              lowest-cost shortcut.
+              Better processes. Better communication. Better workmanship. Better-performing spaces.
+              Mustang combines experienced crews, modern tools, and practical recommendations to
+              design insulation systems around the building instead of the lowest-cost shortcut.
             </p>
           </Reveal>
         </div>
@@ -240,7 +248,9 @@ function Index() {
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
         <Reveal>
           <p className="eyebrow text-red">How It Works</p>
-          <h2 className="mt-4 text-3xl uppercase sm:text-4xl">Inspect → Quote → Install → Warranty</h2>
+          <h2 className="mt-4 text-3xl uppercase sm:text-4xl">
+            Inspect → Quote → Install → Warranty
+          </h2>
         </Reveal>
         <ol className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {process.map((item, i) => (
@@ -288,8 +298,8 @@ function Index() {
             Serving the Dallas-Fort Worth Metroplex
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            Based in the Mid-Cities and working across Tarrant, Dallas and Denton counties.
-            Don't see your city? Call {site.phone} — chances are we're already nearby.
+            Based in the Mid-Cities and working across Tarrant, Dallas and Denton counties. Don't
+            see your city? Call {site.phone} — chances are we're already nearby.
           </p>
         </Reveal>
         <ul className="mt-10 flex flex-wrap gap-2.5">

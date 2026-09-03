@@ -10,9 +10,9 @@ const nav = [
   { to: "/residential", label: "Residential" },
   { to: "/commercial", label: "Commercial" },
   { to: "/services", label: "Services" },
-  { to: "/about", label: "About" },
-  { to: "/gallery", label: "Gallery" },
+  { to: "/gallery", label: "Projects" },
   { to: "/reviews", label: "Reviews" },
+  { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -60,16 +60,17 @@ export function Header() {
         <div className="ml-auto flex items-center gap-3 xl:ml-0">
           <a
             href={site.phoneHref}
-            className="hidden items-center gap-2 font-display text-sm font-bold tracking-wide text-white sm:flex"
+            aria-label={`Call ${site.phone}`}
+            className="flex items-center gap-2 font-display text-sm font-bold tracking-wide text-white"
           >
             <Phone className="size-4 text-red" strokeWidth={2.5} />
-            {site.phone}
+            <span className="hidden sm:inline">{site.phone}</span>
           </a>
           <Link
             to="/contact"
             className="hidden bg-red px-5 py-2.5 font-display text-[0.78rem] font-bold tracking-[0.14em] text-white uppercase transition-colors hover:bg-red-dark sm:inline-block"
           >
-            Free Estimate
+            Get an Estimate
           </Link>
           <button
             type="button"
@@ -109,7 +110,7 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 className="bg-red px-5 py-3 text-center font-display text-xs font-bold tracking-[0.14em] text-white uppercase"
               >
-                Free Estimate
+                Get an Estimate
               </Link>
             </div>
           </nav>

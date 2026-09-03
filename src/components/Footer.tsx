@@ -18,8 +18,8 @@ export function Footer() {
             loading="lazy"
           />
           <p className="mt-6 max-w-xs text-sm leading-relaxed text-white/60">
-            Locally owned and operated insulation contractor serving the Dallas-Fort Worth
-            Metroplex with residential and commercial installation expertise.
+            Locally owned and operated insulation contractor serving Dallas-Fort Worth with
+            residential and commercial insulation solutions built around building performance.
           </p>
           <div className="mt-6 flex gap-3">
             <a
@@ -40,6 +40,24 @@ export function Footer() {
             >
               <Facebook className="size-4" />
             </a>
+            <a
+              href={site.thumbtack}
+              aria-label="Thumbtack reviews"
+              target="_blank"
+              rel="noreferrer"
+              className="grid size-10 place-items-center border border-ink-line font-display text-[0.55rem] font-bold tracking-[0.08em] transition-colors hover:border-red hover:bg-red"
+            >
+              T
+            </a>
+            <a
+              href={site.nextdoor}
+              aria-label="Nextdoor reviews"
+              target="_blank"
+              rel="noreferrer"
+              className="grid size-10 place-items-center border border-ink-line font-display text-[0.55rem] font-bold tracking-[0.08em] transition-colors hover:border-red hover:bg-red"
+            >
+              N
+            </a>
           </div>
         </div>
 
@@ -51,8 +69,8 @@ export function Footer() {
             {services.slice(0, 8).map((s) => (
               <li key={s.slug}>
                 <Link
-                  to="/services"
-                  hash={s.slug}
+                  to="/services/$slug"
+                  params={{ slug: s.slug }}
                   className="transition-colors hover:text-white"
                 >
                   {s.title}
@@ -66,9 +84,7 @@ export function Footer() {
           <h2 className="font-display text-xs font-bold tracking-[0.2em] text-white uppercase">
             Service Area
           </h2>
-          <p className="mt-5 text-sm leading-relaxed text-white/60">
-            {cities.join(" · ")}
-          </p>
+          <p className="mt-5 text-sm leading-relaxed text-white/60">{cities.join(" · ")}</p>
         </div>
 
         <div>
@@ -87,8 +103,8 @@ export function Footer() {
               </a>
             </li>
             <li className="flex items-start gap-2">
-              <MapPin className="mt-0.5 size-4 shrink-0 text-red" /> Dallas-Fort Worth
-              Metroplex, Texas
+              <MapPin className="mt-0.5 size-4 shrink-0 text-red" /> Dallas-Fort Worth Metroplex,
+              Texas
             </li>
           </ul>
           <p className="mt-6 text-xs leading-relaxed text-white/40">
@@ -102,7 +118,11 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
-          <p>Insulation contractor · Dallas-Fort Worth, TX</p>
+          <p>
+            <Link to="/service-areas" className="hover:text-white">
+              Insulation contractor · Dallas-Fort Worth, TX
+            </Link>
+          </p>
         </div>
       </div>
     </footer>

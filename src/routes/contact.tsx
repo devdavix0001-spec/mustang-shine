@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
 
-import heroAttic from "@/assets/hero-attic.jpg";
+import contactImage from "@/assets/old-site/mustang-project-14.jpg";
 import { PageHero } from "@/components/PageHero";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Reveal } from "@/components/Reveal";
@@ -13,12 +13,14 @@ export const Route = createFileRoute("/contact")({
       { title: "Contact Mustang Insulation | Free Estimate" },
       {
         name: "description",
-        content: "Request your free estimate with Mustang Insulation Services. Serving homeowners and commercial clients across Dallas-Fort Worth.",
+        content:
+          "Request your free estimate with Mustang Insulation Services. Serving homeowners and commercial clients across Dallas-Fort Worth.",
       },
       { property: "og:title", content: "Contact Mustang Insulation | Free Estimate" },
       {
         property: "og:description",
-        content: "Call or request a free estimate for attic insulation, spray foam, crawlspaces, commercial insulation, and more in DFW.",
+        content:
+          "Call or request a free estimate for attic insulation, spray foam, crawlspaces, commercial insulation, and more in DFW.",
       },
       { property: "og:url", content: "/contact" },
     ],
@@ -34,7 +36,7 @@ function ContactPage() {
         eyebrow="Contact"
         title="Request your free estimate"
         body="Tell us what you need — attic work, spray foam, air sealing, or a project for a larger commercial property. We’ll follow up quickly with a clear next step."
-        image={heroAttic}
+        image={contactImage}
       />
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
@@ -85,8 +87,14 @@ function ContactPage() {
                   What happens next
                 </p>
                 <ul className="mt-4 space-y-3 text-sm leading-relaxed text-muted-foreground">
-                  <li>• We review your project details and ask a few quick questions about the building, age, and symptoms.</li>
-                  <li>• If needed, we schedule a site visit to inspect the attic, crawlspace, walls, or commercial envelope.</li>
+                  <li>
+                    • We review your project details and ask a few quick questions about the
+                    building, age, and symptoms.
+                  </li>
+                  <li>
+                    • If needed, we schedule a site visit to inspect the attic, crawlspace, walls,
+                    or commercial envelope.
+                  </li>
                   <li>• You receive a clear scope and quote with no pressure and no gimmicks.</li>
                 </ul>
               </div>

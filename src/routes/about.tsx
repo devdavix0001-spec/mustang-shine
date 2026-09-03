@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import heroAttic from "@/assets/hero-attic.jpg";
+import aboutImage from "@/assets/old-site/mustang-project-13.jpg";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
@@ -41,7 +41,7 @@ function AboutPage() {
         eyebrow="About"
         title="Built on service, accountability, and real workmanship"
         body="Mustang Insulation Services is a locally owned company focused on honest recommendations, respectful crews, and insulation work that solves the underlying problem instead of just covering it up."
-        image={heroAttic}
+        image={aboutImage}
       />
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
@@ -58,8 +58,8 @@ function AboutPage() {
               listen, measure, explain the problem, and install the right system for the job.
             </p>
             <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              We do not rely on sales gimmicks or inflated promises. We communicate clearly,
-              give practical recommendations, and leave your property cleaner than we found it.
+              We do not rely on sales gimmicks or inflated promises. We communicate clearly, give
+              practical recommendations, and leave your property cleaner than we found it.
             </p>
           </Reveal>
 
@@ -97,8 +97,8 @@ function AboutPage() {
                   Honest quoting
                 </p>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                  We explain the scope, the insulation depth, and the reason behind it — no pressure,
-                  no tricks, and no hidden add-ons.
+                  We explain the scope, the insulation depth, and the reason behind it — no
+                  pressure, no tricks, and no hidden add-ons.
                 </p>
               </div>
             </Reveal>
@@ -108,8 +108,8 @@ function AboutPage() {
                   Real jobsite experience
                 </p>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                  We inspect the actual attic or building envelope, not just the symptoms. That means
-                  better fixes and fewer callbacks.
+                  We inspect the actual attic or building envelope, not just the symptoms. That
+                  means better fixes and fewer callbacks.
                 </p>
               </div>
             </Reveal>
@@ -119,7 +119,8 @@ function AboutPage() {
                   Product and workmanship coverage
                 </p>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                  We explain the warranty guidance relevant to the product and system so you know what is covered and why.
+                  We explain the warranty guidance relevant to the product and system so you know
+                  what is covered and why.
                 </p>
               </div>
             </Reveal>

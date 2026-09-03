@@ -170,10 +170,10 @@
 
 @utility reveal {
   opacity: 0;
-  transform: translateY(18px);
+  transform: translateY(10px);
   transition:
-    opacity 0.6s ease-out,
-    transform 0.6s ease-out;
+    opacity 0.35s ease-out,
+    transform 0.35s ease-out;
 
   &[data-visible="true"] {
     opacity: 1;
@@ -183,12 +183,33 @@
 
 @utility hover-lift {
   transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    background-color 0.25s ease;
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.18s ease;
 
   &:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 

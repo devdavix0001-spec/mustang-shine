@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CalendarClock, Flame, Ruler, Volume2 } from "lucide-react";
 
-import commercialImg from "@/assets/commercial-metal-building.jpg";
+import commercialImg from "@/assets/old-site/mustang-project-19.jpg";
 import { PageHero } from "@/components/PageHero";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Reveal } from "@/components/Reveal";
@@ -17,7 +17,10 @@ export const Route = createFileRoute("/commercial")({
         content:
           "Metal building, warehouse and office insulation across Dallas-Fort Worth. Spray foam, soundproofing and intumescent fire-protective coatings. Request a quote.",
       },
-      { property: "og:title", content: "Commercial Insulation Contractor DFW | Mustang Insulation" },
+      {
+        property: "og:title",
+        content: "Commercial Insulation Contractor DFW | Mustang Insulation",
+      },
       {
         property: "og:description",
         content:
@@ -60,8 +63,8 @@ function CommercialPage() {
     <>
       <PageHero
         eyebrow="Commercial"
-        title="Metal building & warehouse insulation"
-        body="Insulation built for the scale, schedule, and code requirements of commercial property. Our crews work around your building, your timeline, and your performance goals."
+        title="Commercial insulation built for the job"
+        body="From tenant improvements and retail to warehouses, metal buildings, and new construction, Mustang coordinates the insulation scope around your drawings, schedule, and performance requirements."
         image={commercialImg}
       />
 
@@ -69,7 +72,7 @@ function CommercialPage() {
         <Reveal>
           <p className="eyebrow text-red">Capabilities</p>
           <h2 className="mt-4 max-w-3xl text-3xl uppercase sm:text-4xl">
-            Built for property managers, GCs and building owners
+            A commercial insulation partner GCs can bid with confidence
           </h2>
         </Reveal>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -131,14 +134,14 @@ function CommercialPage() {
       <section className="slash-texture bg-ink py-20 text-white lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-2 lg:items-start">
           <Reveal>
-            <p className="eyebrow text-red">Request a Quote</p>
+            <p className="eyebrow text-red">Commercial estimate</p>
             <h2 className="mt-4 text-3xl text-white uppercase sm:text-4xl">
-              Send us the building, we'll send you the number
+              Send the drawings, scope, or building details
             </h2>
             <p className="mt-5 text-base leading-relaxed text-white/70">
-              Share square footage, building type and timeline. We'll walk the site, confirm
-              scope, and put a transparent best-rate quote in writing — including materials,
-              R-value and any code requirements.
+              Share square footage, building type and timeline. We'll walk the site, confirm scope,
+              and put a transparent best-rate quote in writing — including materials, R-value and
+              any code requirements.
             </p>
             <ul className="mt-8 space-y-3 text-sm text-white/70">
               <li>· Free site evaluations for commercial projects</li>

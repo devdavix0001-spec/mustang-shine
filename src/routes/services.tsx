@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
-import heroAttic from "@/assets/hero-attic.jpg";
+import servicesImage from "@/assets/old-site/mustang-project-17.jpg";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
@@ -42,7 +42,7 @@ function ServicesPage() {
         eyebrow="Services"
         title="Twelve ways we tighten up a building"
         body="Every scope below is installed by experienced Mustang crews, quoted clearly, and built around the specific needs of the home or building."
-        image={heroAttic}
+        image={servicesImage}
       />
 
       <nav aria-label="Service list" className="border-b border-border bg-muted">
@@ -78,6 +78,13 @@ function ServicesPage() {
                 <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
                   {service.blurb}
                 </p>
+                <Link
+                  to="/services/$slug"
+                  params={{ slug: service.slug }}
+                  className="mt-6 inline-flex items-center gap-2 font-display text-[0.7rem] font-bold tracking-[0.14em] text-red uppercase"
+                >
+                  Learn more <ArrowRight className="size-4" />
+                </Link>
               </div>
               <Link
                 to="/contact"

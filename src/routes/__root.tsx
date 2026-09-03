@@ -85,9 +85,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Mustang Insulation Services" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: "https://mustanginsulation.com/assets/Mustang_Logo.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
+      { rel: "canonical", href: "https://mustanginsulation.com/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -101,11 +103,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "HVACBusiness",
+          "@type": "LocalBusiness",
           name: "Mustang Insulation Services",
           telephone: "+1-817-770-1867",
           email: "info@mustanginsulation.com",
+          url: "https://mustanginsulation.com/",
           areaServed: "Dallas-Fort Worth Metroplex, Texas",
+          knowsAbout: [
+            "Attic insulation",
+            "Spray foam insulation",
+            "Commercial insulation",
+            "Air sealing",
+          ],
           description:
             "Family-owned residential and commercial insulation contractor serving the Dallas-Fort Worth Metroplex.",
         }),
@@ -143,6 +152,20 @@ function RootComponent() {
           {/* Required: nested routes render here. */}
           <Outlet />
         </main>
+        <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 border-t border-ink-line bg-ink p-2 sm:hidden">
+          <a
+            href="tel:+18177701867"
+            className="flex min-h-11 items-center justify-center gap-2 border border-ink-line font-display text-xs font-bold tracking-[0.12em] text-white uppercase"
+          >
+            Call Mustang
+          </a>
+          <Link
+            to="/contact"
+            className="flex min-h-11 items-center justify-center bg-red font-display text-xs font-bold tracking-[0.12em] text-white uppercase"
+          >
+            Get an Estimate
+          </Link>
+        </div>
         <Footer />
       </div>
     </QueryClientProvider>

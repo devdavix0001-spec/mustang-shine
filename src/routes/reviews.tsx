@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import heroAttic from "@/assets/hero-attic.jpg";
+import reviewsImage from "@/assets/old-site/mustang-project-15.jpg";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 import { TestimonialCard } from "@/components/TestimonialCard";
-import { testimonials } from "@/lib/site";
+import { site, testimonials } from "@/lib/site";
 
 export const Route = createFileRoute("/reviews")({
   head: () => ({
@@ -13,12 +13,14 @@ export const Route = createFileRoute("/reviews")({
       { title: "Customer Reviews | Mustang Insulation Services" },
       {
         name: "description",
-        content: "Read what DFW homeowners and property managers say about Mustang Insulation Services — responsive, honest, and detail-focused.",
+        content:
+          "Read what DFW homeowners and property managers say about Mustang Insulation Services — responsive, honest, and detail-focused.",
       },
       { property: "og:title", content: "Customer Reviews | Mustang Insulation Services" },
       {
         property: "og:description",
-        content: "Homeowners and property managers across DFW trust Mustang for honest quotes, polished installs, and dependable follow-through.",
+        content:
+          "Homeowners and property managers across DFW trust Mustang for honest quotes, polished installs, and dependable follow-through.",
       },
       { property: "og:url", content: "/reviews" },
     ],
@@ -34,7 +36,7 @@ function ReviewsPage() {
         eyebrow="Reviews"
         title="Real feedback from homeowners and property managers"
         body="Clients call us for a fair quote and stay for the way we work — clean, clear communication, strong detail, and insulation done the right way."
-        image={heroAttic}
+        image={reviewsImage}
       />
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
@@ -45,7 +47,8 @@ function ReviewsPage() {
                 What clients notice
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                The biggest theme in the feedback is simple: we are responsive, thorough, and careful with the details other contractors miss.
+                The biggest theme in the feedback is simple: we are responsive, thorough, and
+                careful with the details other contractors miss.
               </p>
             </div>
           </Reveal>
@@ -55,7 +58,8 @@ function ReviewsPage() {
                 Why they call back
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                Homeowners appreciate the clear pricing, the explanation of the scope, and the fact that our crews show up ready to do the work correctly.
+                Homeowners appreciate the clear pricing, the explanation of the scope, and the fact
+                that our crews show up ready to do the work correctly.
               </p>
             </div>
           </Reveal>
@@ -65,7 +69,8 @@ function ReviewsPage() {
                 What we hear most
               </p>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                “No sales gimmicks,” “good communication,” and “they caught problems before they turned into bigger issues.”
+                “No sales gimmicks,” “good communication,” and “they caught problems before they
+                turned into bigger issues.”
               </p>
             </div>
           </Reveal>
@@ -76,6 +81,27 @@ function ReviewsPage() {
             <Reveal key={`${review.name}-${review.location}`} delay={i * 60}>
               <TestimonialCard {...review} />
             </Reveal>
+          ))}
+        </div>
+
+        <div className="mt-12 flex flex-wrap items-center gap-3 border-t border-border pt-8">
+          <p className="mr-2 font-display text-xs font-bold tracking-[0.16em] uppercase">
+            Read more from Mustang clients
+          </p>
+          {[
+            ["Google", site.google],
+            ["Thumbtack", site.thumbtack],
+            ["Nextdoor", site.nextdoor],
+          ].map(([label, href]) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+              className="border border-border px-4 py-2 font-display text-xs font-bold tracking-[0.12em] uppercase transition-colors hover:border-red hover:text-red"
+            >
+              {label}
+            </a>
           ))}
         </div>
       </section>

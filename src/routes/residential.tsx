@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Phone, ThermometerSun, Wallet, Wind } from "lucide-react";
 
-import residentialImg from "@/assets/residential-home.jpg";
+import residentialImg from "@/assets/old-site/mustang-project-18.jpg";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
@@ -122,15 +122,15 @@ function ResidentialPage() {
               Attic targets vary by home, roof system, and existing conditions
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/70">
-              Typical upgrade levels we see in DFW homes include R-38, R-44, R-49, and R-60,
-              with approximate insulation depths that vary based on the product and the attic
-              configuration. Final recommendations depend on the existing insulation, the roof
-              and framing assembly, local code requirements, and the condition of the home.
+              Typical upgrade levels we see in DFW homes include R-38, R-44, R-49, and R-60, with
+              approximate insulation depths that vary based on the product and the attic
+              configuration. Final recommendations depend on the existing insulation, the roof and
+              framing assembly, local code requirements, and the condition of the home.
             </p>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/70">
-              Mustang evaluates each attic before recommending a system. We look at what is
-              already there, where air is leaking, and what will improve performance without
-              overbuilding the space.
+              Mustang evaluates each attic before recommending a system. We look at what is already
+              there, where air is leaking, and what will improve performance without overbuilding
+              the space.
             </p>
           </Reveal>
           <Reveal delay={80}>

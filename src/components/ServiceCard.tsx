@@ -6,8 +6,8 @@ import type { Service } from "@/lib/site";
 export function ServiceCard({ service, dark = false }: { service: Service; dark?: boolean }) {
   return (
     <Link
-      to="/services"
-      hash={service.slug}
+      to="/services/$slug"
+      params={{ slug: service.slug }}
       className={`hover-lift group block border p-6 ${
         dark
           ? "border-ink-line bg-ink-soft hover:border-red"

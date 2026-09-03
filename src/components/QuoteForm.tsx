@@ -13,6 +13,12 @@ export function QuoteForm({ dark = false, heading = "Request your free estimate"
     phone: "",
     email: "",
     service: "",
+    propertyType: "",
+    projectType: "",
+    squareFootage: "",
+    preferredContact: "",
+    timeline: "",
+    photos: null as FileList | null,
     city: "",
     message: "",
   });
@@ -59,9 +65,11 @@ export function QuoteForm({ dark = false, heading = "Request your free estimate"
         <h3 className={`mt-4 text-2xl ${dark ? "text-white" : "text-foreground"}`}>
           Thanks — we'll be in touch.
         </h3>
-        <p className={`mt-3 text-sm leading-relaxed ${dark ? "text-white/65" : "text-muted-foreground"}`}>
-          A Mustang team member will reach out shortly to schedule your free evaluation. Need
-          it handled today? Call 817-770-1867.
+        <p
+          className={`mt-3 text-sm leading-relaxed ${dark ? "text-white/65" : "text-muted-foreground"}`}
+        >
+          A Mustang team member will reach out shortly to schedule your free evaluation. Need it
+          handled today? Call 817-770-1867.
         </p>
       </div>
     );
@@ -93,6 +101,75 @@ export function QuoteForm({ dark = false, heading = "Request your free estimate"
             autoComplete="name"
           />
           {errors.name && <p className="mt-1.5 text-xs text-red">{errors.name}</p>}
+        </div>
+
+        <div>
+          <label className={label} htmlFor="qf-property-type">
+            Property type
+          </label>
+          <select
+            id="qf-property-type"
+            className={field}
+            value={values.propertyType}
+            onChange={(e) => setValues({ ...values, propertyType: e.target.value })}
+          >
+            <option value="">Select property type</option>
+            <option>Residential</option>
+            <option>Commercial</option>
+            <option>New construction</option>
+            <option>Not sure</option>
+          </select>
+        </div>
+
+        <div>
+          <label className={label} htmlFor="qf-project-type">
+            Project type
+          </label>
+          <select
+            id="qf-project-type"
+            className={field}
+            value={values.projectType}
+            onChange={(e) => setValues({ ...values, projectType: e.target.value })}
+          >
+            <option value="">Select project type</option>
+            <option>Existing property</option>
+            <option>Renovation</option>
+            <option>New construction</option>
+            <option>Tenant improvement</option>
+          </select>
+        </div>
+
+        <div>
+          <label className={label} htmlFor="qf-square-footage">
+            Approximate square footage{" "}
+            <span className="font-normal normal-case text-muted-foreground">(optional)</span>
+          </label>
+          <input
+            id="qf-square-footage"
+            className={field}
+            inputMode="numeric"
+            value={values.squareFootage}
+            onChange={(e) => setValues({ ...values, squareFootage: e.target.value })}
+            placeholder="2,000"
+          />
+        </div>
+
+        <div>
+          <label className={label} htmlFor="qf-timeline">
+            Project timeline
+          </label>
+          <select
+            id="qf-timeline"
+            className={field}
+            value={values.timeline}
+            onChange={(e) => setValues({ ...values, timeline: e.target.value })}
+          >
+            <option value="">Select timeline</option>
+            <option>ASAP</option>
+            <option>Within 30 days</option>
+            <option>1–3 months</option>
+            <option>Planning / researching</option>
+          </select>
         </div>
 
         <div>
@@ -171,6 +248,39 @@ export function QuoteForm({ dark = false, heading = "Request your free estimate"
           {errors.service && <p className="mt-1.5 text-xs text-red">{errors.service}</p>}
         </div>
 
+        <fieldset className="sm:col-span-2">
+          <legend className={label}>Preferred contact method</legend>
+          <div className="flex flex-wrap gap-5 text-sm text-muted-foreground">
+            {["Call", "Text", "Email"].map((method) => (
+              <label key={method} className="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="preferred-contact"
+                  value={method}
+                  checked={values.preferredContact === method}
+                  onChange={(e) => setValues({ ...values, preferredContact: e.target.value })}
+                />
+                {method}
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
+        <div className="sm:col-span-2">
+          <label className={label} htmlFor="qf-photos">
+            Upload project photos{" "}
+            <span className="font-normal normal-case text-muted-foreground">(optional)</span>
+          </label>
+          <input
+            id="qf-photos"
+            className={`${field} file:mr-4 file:border-0 file:bg-transparent file:font-display file:text-xs file:font-bold file:tracking-[0.1em] file:uppercase`}
+            type="file"
+            accept="image/*"
+            multiple
+            onChange={(e) => setValues({ ...values, photos: e.target.files })}
+          />
+        </div>
+
         <div className="sm:col-span-2">
           <label className={label} htmlFor="qf-message">
             Project details
@@ -191,7 +301,7 @@ export function QuoteForm({ dark = false, heading = "Request your free estimate"
         type="submit"
         className="mt-7 w-full bg-red px-6 py-4 font-display text-sm font-bold tracking-[0.16em] text-white uppercase transition-colors hover:bg-red-dark"
       >
-        Get My Free Estimate
+        Get an Estimate
       </button>
       <p className={`mt-3 text-xs ${dark ? "text-white/40" : "text-muted-foreground"}`}>
         No spam, no sales gimmicks — just a straight answer on your project.

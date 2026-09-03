@@ -39,9 +39,7 @@ export function CtaBand({
           <a
             href={site.phoneHref}
             className={`inline-flex items-center justify-center gap-2 px-7 py-4 font-display text-sm font-bold tracking-[0.14em] uppercase transition-colors ${
-              isRed
-                ? "bg-white text-ink hover:bg-white/85"
-                : "bg-red text-white hover:bg-red-dark"
+              isRed ? "bg-white text-ink hover:bg-white/85" : "bg-red text-white hover:bg-red-dark"
             }`}
           >
             <Phone className="size-4" strokeWidth={2.5} /> {site.phone}
@@ -54,7 +52,7 @@ export function CtaBand({
                 : "border border-white/40 text-white hover:bg-white/10"
             }`}
           >
-            Request a Quote
+            Get an Estimate
           </Link>
         </div>
       </div>
