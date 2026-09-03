@@ -15,7 +15,7 @@ export const Route = createFileRoute("/commercial")({
       {
         name: "description",
         content:
-          "Metal building, warehouse and office insulation across Dallas-Fort Worth. Spray foam, soundproofing and intumescent fire-protective coatings. Request a quote.",
+          "Metal building, warehouse and office insulation across Dallas-Fort Worth. Spray foam, soundproofing and intumescent fire-protective coatings. Get an estimate.",
       },
       {
         property: "og:title",

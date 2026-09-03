@@ -56,7 +56,7 @@ Split the site into two clear tracks: **Residential** and **Commercial**, matchi
 
 ## Brand voice (pulled from their existing marketing — keep this tone)
 
-Straightforward, local, no-nonsense trade-contractor voice. Confident but not corporate. Emphasizes: family-owned, honest/transparent pricing, no sales gimmicks, no subcontractors, free estimates, lifetime warranty on installs, energy-efficiency and comfort benefits, fast responsiveness. Real customer language to echo: "unmatched customer service with quality work," "transparent best rate quotes," "no sales gimmicks," "Trust the #1 insulation company in North Texas."
+Straightforward, local, no-nonsense trade-contractor voice. Confident but not corporate. Emphasizes: family-owned and locally operated, honest pricing, no sales gimmicks, professional installation by experienced crews, free estimates, service-specific warranty guidance, energy-efficiency and comfort benefits, and fast responsiveness.
 
 Sample proof points to weave into copy:
 
@@ -83,16 +83,16 @@ Sample proof points to weave into copy:
 2. **Residential** — services list, attic focus, comfort/energy-bill messaging, R-value guidance
 3. **Commercial** — metal building/warehouse insulation, soundproofing, larger-scale project framing, request-a-quote form
 4. **Services** (or individual service sub-pages/anchors) for each of the 12 services listed above, each with a short description and a "Get a Quote" CTA
-5. **About** — Matt's story, family-owned angle, service area, values (honesty, no gimmicks, quality)
+5. **About** — family-owned and locally operated, service area, values (honesty, no gimmicks, quality)
 6. **Gallery** — grid for project photos (build with placeholder images the user will swap in)
 7. **Reviews** — paraphrased testimonial cards + links out to Thumbtack/Nextdoor/Facebook/Google
 8. **Contact** — form (name, phone, email, city, service needed, message), click-to-call button, service area list, embedded map, social links
 
 ## Testimonial content (paraphrase for the site — do not reproduce verbatim)
 
-- A Colleyville customer describes Matt identifying and repairing two roof openings squirrels were using to get in, during an insulation quote, and finishing the added repair as part of the job.
+- A Colleyville customer describes the team identifying and repairing roof openings squirrels were using to get in during an insulation quote.
 - A homeowner in a 1950s house praised the team's responsiveness and speed getting a quote together.
-- Nextdoor reviewers highlight Matt's attention to detail, including catching ductwork issues while replacing old insulation, and describe the service as better than expected.
+- Nextdoor reviewers highlight the team's attention to detail, including catching ductwork issues while replacing old insulation, and describe the service as better than expected.
 
 ## Imagery direction
 

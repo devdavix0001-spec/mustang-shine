@@ -64,7 +64,6 @@ function Index() {
     services.find((service) => service.slug === "spray-foam-insulation"),
     services.find((service) => service.slug === "attic-air-sealing"),
     services.find((service) => service.slug === "metal-building-insulation"),
-    services.find((service) => service.slug === "insulation-removal"),
   ].filter(Boolean) as typeof services;
 
   return (
@@ -95,7 +94,7 @@ function Index() {
               to="/contact"
               className="inline-flex items-center gap-2 bg-red px-7 py-4 font-display text-sm font-bold tracking-[0.14em] text-white uppercase transition-colors hover:bg-red-dark"
             >
-              Get a Free Estimate <ArrowRight className="size-4" />
+              Get an Estimate <ArrowRight className="size-4" />
             </Link>
             <a
               href={site.phoneHref}
@@ -129,7 +128,7 @@ function Index() {
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
             From a single hot upstairs bedroom to a 40,000 sq ft metal building, we scope it, price
-            it honestly, and install it with our own crews.
+            it honestly, and install it with experienced crews.
           </p>
         </Reveal>
 

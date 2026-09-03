@@ -105,7 +105,7 @@ function ServiceDetailPage() {
           to="/contact"
           className="inline-flex items-center gap-2 bg-red px-7 py-4 font-display text-sm font-bold tracking-[0.14em] text-white uppercase transition-colors hover:bg-red-dark"
         >
-          Get a Free Estimate <ArrowRight className="size-4" />
+          Get an Estimate <ArrowRight className="size-4" />
         </Link>
         <a
           href={site.phoneHref}

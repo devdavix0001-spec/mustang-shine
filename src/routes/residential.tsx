@@ -56,14 +56,14 @@ function ResidentialPage() {
       <PageHero
         eyebrow="Residential"
         title="Insulation that makes your house feel right"
-        body="Blown-in attic insulation, batts, spray foam, removal, air sealing and radiant barriers for homes across the Metroplex — installed by our own employees."
+        body="Blown-in attic insulation, batts, spray foam, removal, air sealing and radiant barriers for homes across the Metroplex — installed by experienced crews."
         image={residentialImg}
       >
         <Link
           to="/contact"
           className="inline-flex items-center gap-2 bg-red px-7 py-4 font-display text-sm font-bold tracking-[0.14em] text-white uppercase transition-colors hover:bg-red-dark"
         >
-          Get a Free Estimate <ArrowRight className="size-4" />
+          Get an Estimate <ArrowRight className="size-4" />
         </Link>
         <a
           href={site.phoneHref}

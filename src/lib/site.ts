@@ -469,7 +469,7 @@ export const process = [
   {
     step: "03",
     title: "Install",
-    body: "Our own employees do the work, protect your home, and hit the specified depth and coverage the first time.",
+    body: "Experienced crews protect your home and work toward the specified depth and coverage with careful installation.",
   },
   {
     step: "04",

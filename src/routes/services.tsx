@@ -43,14 +43,7 @@ function ServicesPage() {
         title="Twelve ways we tighten up a building"
         body="Every scope below is installed by experienced Mustang crews, quoted clearly, and built around the specific needs of the home or building."
         image={servicesImage}
-      >
-        <Link
-          to="/contact"
-          className="inline-flex items-center gap-2 bg-red px-7 py-4 font-display text-sm font-bold tracking-[0.14em] text-white uppercase transition-colors hover:bg-red-dark"
-        >
-          Get a Quote <ArrowRight className="size-4" />
-        </Link>
-      </PageHero>
+      />
 
       <nav aria-label="Service list" className="border-b border-border bg-muted">
         <ul className="mx-auto flex max-w-7xl flex-wrap gap-x-5 gap-y-2 px-5 py-5 sm:px-8">
@@ -67,41 +60,36 @@ function ServicesPage() {
         </ul>
       </nav>
 
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="mx-auto grid max-w-7xl gap-5 px-5 py-16 sm:px-8 md:grid-cols-2 lg:grid-cols-3 lg:py-20">
         {services.map((service, i) => (
-          <Reveal key={service.slug} as="section">
-            <section
+          <Reveal key={service.slug} delay={i * 35} className="h-full">
+            <article
               id={service.slug}
-              className="grid gap-6 border-b border-border py-12 lg:grid-cols-[auto_1fr_auto] lg:items-start lg:gap-10"
+              className="hover-lift flex h-full flex-col border border-border bg-card p-7"
             >
-              <span className="font-display text-3xl text-muted-foreground">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <p className="font-display text-[0.68rem] font-bold tracking-[0.2em] text-red uppercase">
+              <div className="flex items-start justify-between gap-4">
+                <span className="font-display text-3xl text-muted-foreground">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="font-display text-right text-[0.65rem] font-bold tracking-[0.16em] text-red uppercase">
                   {trackLabel[service.track]}
                 </p>
-                <h2 className="mt-3 text-2xl uppercase sm:text-3xl">{service.title}</h2>
-                <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-                  {service.blurb}
-                </p>
-                <div className="mt-6 flex flex-wrap items-center gap-5">
-                  <Link
-                    to="/services/$slug"
-                    params={{ slug: service.slug }}
-                    className="inline-flex items-center gap-2 font-display text-[0.7rem] font-bold tracking-[0.14em] text-red uppercase"
-                  >
-                    Learn more <ArrowRight className="size-4" />
-                  </Link>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-2 border border-foreground px-4 py-2 font-display text-[0.7rem] font-bold tracking-[0.12em] uppercase transition-colors hover:bg-foreground hover:text-background"
-                  >
-                    Get a Quote <ArrowRight className="size-4" />
-                  </Link>
-                </div>
               </div>
-            </section>
+              <h2 className="mt-8 text-2xl uppercase">{service.title}</h2>
+              <div className="mt-4 h-0.5 w-10 bg-red" />
+              <p className="mt-5 flex-1 text-sm leading-relaxed text-muted-foreground">
+                {service.blurb}
+              </p>
+              <div className="mt-7">
+                <Link
+                  to="/services/$slug"
+                  params={{ slug: service.slug }}
+                  className="inline-flex items-center gap-2 font-display text-[0.7rem] font-bold tracking-[0.14em] text-red uppercase"
+                >
+                  Learn more <ArrowRight className="size-4" />
+                </Link>
+              </div>
+            </article>
           </Reveal>
         ))}
       </div>
