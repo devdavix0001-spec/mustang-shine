@@ -8,9 +8,9 @@ import project4 from "@/assets/Blown-In Attic Insulation-3.jpg";
 import project5 from "@/assets/Fiberglass Batt Insulation.jpg";
 import project6 from "@/assets/Fiberglass Batt Insulation-2.jpg";
 import project7 from "@/assets/Fiberglass Batt Insulation-3.jpg";
-import project8 from "@/assets/old-site/mustang-project-8.jpg";
-import project9 from "@/assets/old-site/mustang-project-9.jpg";
-import project10 from "@/assets/old-site/mustang-project-10.jpg";
+import project8 from "@/assets/Spray Foam Insulation.jpg";
+import project9 from "@/assets/Spray Foam Insulation-2.jpg";
+import project10 from "@/assets/Spray Foam Insulation-3.jpg";
 import project11 from "@/assets/old-site/mustang-project-11.jpg";
 import project12 from "@/assets/old-site/mustang-project-12.jpg";
 import { PageHero } from "@/components/PageHero";
@@ -20,7 +20,7 @@ import { cities, serviceDetails, services, site } from "@/lib/site";
 const serviceImages: Record<string, string> = {
   "blown-in-attic-insulation": project2,
   "fiberglass-batt-insulation": project5,
-  "spray-foam-insulation": project1,
+  "spray-foam-insulation": project8,
   "insulation-removal": project4,
   "attic-air-sealing": project5,
   "radiant-barriers": project6,
@@ -35,7 +35,7 @@ const serviceImages: Record<string, string> = {
 const serviceImageSets: Record<string, string[]> = {
   "blown-in-attic-insulation": [project2, project3, project4],
   "fiberglass-batt-insulation": [project5, project6, project7],
-  "spray-foam-insulation": [project1, project5, project7],
+  "spray-foam-insulation": [project8, project9, project10],
   "insulation-removal": [project4, project11, project12],
   "attic-air-sealing": [project5, project7, project2],
   "radiant-barriers": [project6, project10, project3],
