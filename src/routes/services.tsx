@@ -50,7 +50,7 @@ const trackLabel: Record<string, string> = {
 const serviceImages = [
   project2,
   project3,
-  project1,
+  project4,
   project4,
   project5,
   project6,
