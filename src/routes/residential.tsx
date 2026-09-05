@@ -2,8 +2,6 @@ import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Phone, ThermometerSun, Wallet, Wind } from "lucide-react";
 
-import residentialImg from "@/assets/old-site/mustang-project-18.jpg";
-
 import residential1 from "@/assets/Residential/residential-1.png";
 import residential2 from "@/assets/Residential/residential-2.png";
 import residential3 from "@/assets/Residential/residential-3.png";
@@ -140,7 +138,7 @@ function ResidentialPage() {
         eyebrow="Residential"
         title="Insulation that makes your house feel right"
         body="Blown-in attic insulation, batts, spray foam, removal, air sealing and radiant barriers for homes across the Metroplex — installed by experienced crews."
-        image={residentialImg}
+        image={residential1}
       >
         <Link
           to="/contact"
