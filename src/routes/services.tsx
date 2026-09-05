@@ -56,10 +56,10 @@ const serviceImages = [
   project7,
   project8,
   project9,
-  project0,
   project10,
   project11,
   project12,
+  project13,
 ];
 
 function ServicesPage() {
