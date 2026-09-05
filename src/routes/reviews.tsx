@@ -88,21 +88,14 @@ function ReviewsPage() {
           <p className="mr-2 font-display text-xs font-bold tracking-[0.16em] uppercase">
             Read more from Mustang clients
           </p>
-          {[
-            ["Google", site.google],
-            ["Thumbtack", site.thumbtack],
-            ["Nextdoor", site.nextdoor],
-          ].map(([label, href]) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noreferrer"
-              className="border border-border px-4 py-2 font-display text-xs font-bold tracking-[0.12em] uppercase transition-colors hover:border-red hover:text-red"
-            >
-              {label}
-            </a>
-          ))}
+          <a
+            href={site.google}
+            target="_blank"
+            rel="noreferrer"
+            className="border border-border px-4 py-2 font-display text-xs font-bold tracking-[0.12em] uppercase transition-colors hover:border-red hover:text-red"
+          >
+            Google
+          </a>
         </div>
       </section>
 
