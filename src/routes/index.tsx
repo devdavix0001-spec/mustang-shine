@@ -68,43 +68,49 @@ function Index() {
 
   return (
     <>
-      <section className="relative isolate overflow-hidden bg-ink">
-        <img
-          src={project1}
-          alt="Mustang Insulation technician installing blown-in attic insulation in a DFW home"
-          className="absolute inset-0 size-full object-cover"
-          width={1920}
-          height={1088}
-        />
-        <div className="photo-scrim absolute inset-0" />
-        <div className="slash-texture absolute inset-0" />
-        <div className="relative mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-36">
-          <p className="eyebrow text-red">Arlington · Fort Worth · Dallas</p>
-          <h1 className="mt-6 max-w-4xl text-5xl leading-[1.02] text-white uppercase sm:text-6xl lg:text-7xl">
-            Smarter insulation.
-            <br />
-            Better-performing spaces.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
-            Residential and commercial insulation solutions engineered for comfort, efficiency, and
-            long-term building performance across Dallas-Fort Worth.
-          </p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-red px-7 py-4 font-display text-sm font-bold tracking-[0.14em] text-white uppercase transition-colors hover:bg-red-dark"
-            >
-              Get an Estimate <ArrowRight className="size-4" />
-            </Link>
-            <a
-              href={site.phoneHref}
-              className="inline-flex items-center gap-2 border border-white/60 px-7 py-4 font-display text-sm font-bold tracking-[0.14em] text-white uppercase transition-colors hover:bg-white/10"
-            >
-              <Phone className="size-4" strokeWidth={2.5} /> Call {site.phone}
-            </a>
-          </div>
-        </div>
-      </section>
+     <section className="relative isolate overflow-hidden bg-ink">
+  <img
+    src={project1}
+    alt="Mustang Insulation technician installing blown-in attic insulation in a DFW home"
+    className="absolute inset-0 size-full object-cover"
+    width={1920}
+    height={1088}
+  />
+
+  {/* Left-to-right gradient: dark on the left for text contrast, fades to transparent so the image shows on the right */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-r from-red-950/50 via-transparent to-transparent" />
+
+  <div className="slash-texture absolute inset-0" />
+  <div className="relative mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-36">
+    <p className="eyebrow inline-block rounded-full bg-red-600 px-4 py-1.5 text-xs font-bold tracking-wide text-white uppercase sm:text-sm">
+      Arlington · Fort Worth · Dallas
+    </p>
+    <h1 className="mt-6 max-w-4xl text-5xl leading-[1.02] text-white uppercase sm:text-6xl lg:text-7xl">
+      Smarter insulation.
+      <br />
+      Better-performing spaces.
+    </h1>
+    <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
+      Residential and commercial insulation solutions engineered for comfort, efficiency, and
+      long-term building performance across Dallas-Fort Worth.
+    </p>
+    <div className="mt-9 flex flex-wrap gap-3">
+      <Link
+        to="/contact"
+        className="inline-flex items-center gap-2 bg-red px-7 py-4 font-display text-sm font-bold tracking-[0.14em] text-white uppercase transition-colors hover:bg-red-dark"
+      >
+        Get an Estimate <ArrowRight className="size-4" />
+      </Link>
+      
+        href={site.phoneHref}
+        className="inline-flex items-center gap-2 border border-white/60 px-7 py-4 font-display text-sm font-bold tracking-[0.14em] text-white uppercase transition-colors hover:bg-white/10"
+      >
+        <Phone className="size-4" strokeWidth={2.5} /> Call {site.phone}
+      </a>
+    </div>
+  </div>
+</section>
 
       <div className="border-y border-ink-line bg-ink-soft">
         <ul className="mx-auto grid max-w-7xl gap-3 px-5 py-5 sm:px-8 md:grid-cols-4">
