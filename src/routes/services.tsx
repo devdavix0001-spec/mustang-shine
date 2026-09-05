@@ -5,7 +5,7 @@ import servicesImage from "@/assets/old-site/mustang-project-17.jpg";
 import project1 from "@/assets/old-site/mustang-project-1.jpg";
 import project2 from "@/assets/Blown-In Attic Insulation.jpg";
 import project3 from "@/assets/Fiberglass Batt Insulation.jpg";
-import project4 from "@/assets/old-site/mustang-project-4.jpg";
+import project4 from "@/assets/Spray Foam Insulation.jpg";
 import project5 from "@/assets/old-site/mustang-project-5.jpg";
 import project6 from "@/assets/old-site/mustang-project-6.jpg";
 import project7 from "@/assets/old-site/mustang-project-7.jpg";
