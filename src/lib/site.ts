@@ -419,32 +419,60 @@ export const serviceDetails: Record<string, ServiceDetail> = {
 
 export const testimonials = [
   {
-    name: "John",
-    location: "Arlington, TX",
+    name: "Brian Scoles",
+    location: "Google Review",
     source: "Google",
     quote:
-      "Mustang showed up on time, explained everything clearly, and left the attic cleaner than they found it.",
+      "They were very prompt and professional. Matt was good to do business with — honest and quick to get the work scheduled.",
   },
   {
-    name: "Laura",
-    location: "Fort Worth, TX",
-    source: "Thumbtack",
+    name: "Benjamin Moody",
+    location: "Google Review",
+    source: "Google",
     quote:
-      "The crew responded quickly, gave us a clear quote, and took the time to explain what needed to be done before the job started.",
+      "Great pricing, amazing communication. Nothing but professionalism coming from Mustang Insulation. 10/10 would highly recommend.",
   },
   {
-    name: "Dana",
-    location: "Hurst, TX",
-    source: "Nextdoor",
+    name: "David Cooksey",
+    location: "Google Review",
+    source: "Google",
     quote:
-      "The attention to detail stood out. They caught ductwork issues in the attic instead of just covering up the old insulation.",
+      "They removed everything from the attic, sealed the floor, and added more insulation than I've ever had. My AC now comes on half as often.",
   },
   {
-    name: "Brian",
-    location: "Mansfield, TX",
-    source: "Nextdoor",
+    name: "Bruce Strum",
+    location: "Google Review",
+    source: "Google",
     quote:
-      "Better than expected from start to finish. Honest pricing, no sales pitch, and the attic was cleaner when they left than when they arrived.",
+      "Paul and the crew showed up early, worked late, were thorough, and kept us informed the whole way through.",
+  },
+  {
+    name: "Natasha Cortés",
+    location: "Google Review",
+    source: "Google",
+    quote:
+      "Outstanding experience from the very beginning — their team was incredibly thorough during the inspection and completely transparent throughout.",
+  },
+  {
+    name: "Chris Storey",
+    location: "Google Review",
+    source: "Google",
+    quote:
+      "They removed all the old insulation, cleaned out years of debris, and gave me a great price on new insulation. Very professional and on time every time.",
+  },
+  {
+    name: "Valentyn Tsuper",
+    location: "Google Review",
+    source: "Google",
+    quote:
+      "Truly a top-of-the-line spray foam company. They handled our large metal barn project and exceeded expectations in every way.",
+  },
+  {
+    name: "Phil Poland",
+    location: "Google Review",
+    source: "Google",
+    quote:
+      "Absolutely 5 stars all the way! Excellent communication about what should be done, at a great price point.",
   },
 ];
 
