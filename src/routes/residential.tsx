@@ -1,7 +1,36 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Phone, ThermometerSun, Wallet, Wind } from "lucide-react";
 
 import residentialImg from "@/assets/old-site/mustang-project-18.jpg";
+
+import residential1 from "@/assets/Residential/residential-1.png";
+import residential2 from "@/assets/Residential/residential-2.png";
+import residential3 from "@/assets/Residential/residential-3.png";
+import residential4 from "@/assets/Residential/residential-4.png";
+import residential5 from "@/assets/Residential/residential-5.png";
+
+import closedCell1 from "@/assets/Residential/New Construction - Closed Cell/New Construction - Closed Cell-1.jpg";
+import closedCell2 from "@/assets/Residential/New Construction - Closed Cell/New Construction - Closed Cell-2.jpg";
+
+import openCell1 from "@/assets/Residential/New Construction - Open Cell/New Construction - Open Cell-1.jpg";
+import openCell2 from "@/assets/Residential/New Construction - Open Cell/New Construction - Open Cell-2.jpg";
+import openCell3 from "@/assets/Residential/New Construction - Open Cell/New Construction - Open Cell-3.jpg";
+import openCell4 from "@/assets/Residential/New Construction - Open Cell/New Construction - Open Cell-4.jpg";
+import openCell5 from "@/assets/Residential/New Construction - Open Cell/New Construction - Open Cell-5.jpg";
+import openCell6 from "@/assets/Residential/New Construction - Open Cell/New Construction - Open Cell-6.jpg";
+import openCell7 from "@/assets/Residential/New Construction - Open Cell/New Construction - Open Cell-7.jpg";
+import openCell8 from "@/assets/Residential/New Construction - Open Cell/New Construction - Open Cell-8.jpg";
+
+import nmf1 from "@/assets/Residential/New multi family build - 17 unit condos Arlington/Nmf-1.png";
+import nmf2 from "@/assets/Residential/New multi family build - 17 unit condos Arlington/Nmf-2.png";
+import nmf3 from "@/assets/Residential/New multi family build - 17 unit condos Arlington/Nmf-3.png";
+import nmf4 from "@/assets/Residential/New multi family build - 17 unit condos Arlington/Nmf-4.png";
+import nmf5 from "@/assets/Residential/New multi family build - 17 unit condos Arlington/Nmf-5.png";
+import nmf6 from "@/assets/Residential/New multi family build - 17 unit condos Arlington/Nmf-6.png";
+import nmf7 from "@/assets/Residential/New multi family build - 17 unit condos Arlington/Nmf-7.png";
+import nmf8 from "@/assets/Residential/New multi family build - 17 unit condos Arlington/Nmf-8.png";
+
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
@@ -48,8 +77,62 @@ const benefits = [
   },
 ];
 
+type ProjectCategory = "all" | "homes" | "closed-cell" | "open-cell" | "multifamily";
+
+type Project = {
+  src: string;
+  alt: string;
+  category: Exclude<ProjectCategory, "all">;
+};
+
+const projectCategories: { id: ProjectCategory; label: string }[] = [
+  { id: "all", label: "All Projects" },
+  { id: "homes", label: "Homes" },
+  { id: "closed-cell", label: "New Construction — Closed Cell" },
+  { id: "open-cell", label: "New Construction — Open Cell" },
+  { id: "multifamily", label: "17-Unit Condos, Arlington" },
+];
+
+const projects: Project[] = [
+  { src: residential1, alt: "Residential attic insulation project in a DFW home", category: "homes" },
+  { src: residential2, alt: "Residential attic insulation project in a DFW home", category: "homes" },
+  { src: residential3, alt: "Residential attic insulation project in a DFW home", category: "homes" },
+  { src: residential4, alt: "Residential attic insulation project in a DFW home", category: "homes" },
+  { src: residential5, alt: "Residential attic insulation project in a DFW home", category: "homes" },
+  {
+    src: closedCell1,
+    alt: "New construction closed-cell spray foam insulation install",
+    category: "closed-cell",
+  },
+  {
+    src: closedCell2,
+    alt: "New construction closed-cell spray foam insulation install",
+    category: "closed-cell",
+  },
+  { src: openCell1, alt: "New construction open-cell spray foam insulation install", category: "open-cell" },
+  { src: openCell2, alt: "New construction open-cell spray foam insulation install", category: "open-cell" },
+  { src: openCell3, alt: "New construction open-cell spray foam insulation install", category: "open-cell" },
+  { src: openCell4, alt: "New construction open-cell spray foam insulation install", category: "open-cell" },
+  { src: openCell5, alt: "New construction open-cell spray foam insulation install", category: "open-cell" },
+  { src: openCell6, alt: "New construction open-cell spray foam insulation install", category: "open-cell" },
+  { src: openCell7, alt: "New construction open-cell spray foam insulation install", category: "open-cell" },
+  { src: openCell8, alt: "New construction open-cell spray foam insulation install", category: "open-cell" },
+  { src: nmf1, alt: "17-unit condo build insulation project in Arlington, TX", category: "multifamily" },
+  { src: nmf2, alt: "17-unit condo build insulation project in Arlington, TX", category: "multifamily" },
+  { src: nmf3, alt: "17-unit condo build insulation project in Arlington, TX", category: "multifamily" },
+  { src: nmf4, alt: "17-unit condo build insulation project in Arlington, TX", category: "multifamily" },
+  { src: nmf5, alt: "17-unit condo build insulation project in Arlington, TX", category: "multifamily" },
+  { src: nmf6, alt: "17-unit condo build insulation project in Arlington, TX", category: "multifamily" },
+  { src: nmf7, alt: "17-unit condo build insulation project in Arlington, TX", category: "multifamily" },
+  { src: nmf8, alt: "17-unit condo build insulation project in Arlington, TX", category: "multifamily" },
+];
+
 function ResidentialPage() {
   const list = services.filter((s) => s.track !== "commercial");
+  const [activeCategory, setActiveCategory] = useState<ProjectCategory>("all");
+
+  const filteredProjects =
+    activeCategory === "all" ? projects : projects.filter((p) => p.category === activeCategory);
 
   return (
     <>
@@ -164,6 +247,52 @@ function ResidentialPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
+        <Reveal>
+          <p className="eyebrow text-red">Recent Residential Projects</p>
+          <h2 className="mt-4 max-w-3xl text-3xl uppercase sm:text-4xl">
+            A look at homes, new builds and multi-family work
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+            From single-family attics to new-construction spray foam and a 17-unit condo build in
+            Arlington — a sample of recent residential work across DFW.
+          </p>
+        </Reveal>
+
+        <div className="mt-10 flex flex-wrap gap-2.5">
+          {projectCategories.map((cat) => (
+            <button
+              key={cat.id}
+              type="button"
+              onClick={() => setActiveCategory(cat.id)}
+              className={`border px-4 py-2 font-display text-xs font-bold tracking-[0.12em] uppercase transition-colors ${
+                activeCategory === cat.id
+                  ? "border-red bg-red text-white"
+                  : "border-border text-foreground hover:border-red hover:text-red"
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {filteredProjects.map((project, i) => (
+            <div
+              key={project.src}
+              className="hover-lift group relative isolate aspect-[4/3] overflow-hidden border border-border"
+            >
+              <img
+                src={project.src}
+                alt={project.alt}
+                loading={i < 8 ? "eager" : "lazy"}
+                className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 pb-20 sm:px-8 lg:pb-24">
         <Reveal>
           <p className="eyebrow text-red">Residential Services</p>
           <h2 className="mt-4 text-3xl uppercase sm:text-4xl">What we install in homes</h2>
