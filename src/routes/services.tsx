@@ -6,7 +6,7 @@ import project1 from "@/assets/old-site/mustang-project-1.jpg";
 import project2 from "@/assets/Blown-In Attic Insulation.jpg";
 import project3 from "@/assets/Fiberglass Batt Insulation.jpg";
 import project4 from "@/assets/Spray Foam Insulation.jpg";
-import project5 from "@/assets/old-site/mustang-project-5.jpg";
+import project5 from "@/assets/Insulation Removal.jpg";
 import project6 from "@/assets/old-site/mustang-project-6.jpg";
 import project7 from "@/assets/old-site/mustang-project-7.jpg";
 import project8 from "@/assets/old-site/mustang-project-8.jpg";
@@ -51,12 +51,12 @@ const serviceImages = [
   project2,
   project3,
   project4,
-  project4,
   project5,
   project6,
   project7,
   project8,
   project9,
+  project0,
   project10,
   project11,
   project12,
