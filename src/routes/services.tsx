@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 import servicesImage from "@/assets/old-site/mustang-project-17.jpg";
 import project1 from "@/assets/old-site/mustang-project-1.jpg";
-import project2 from "@/assets/old-site/mustang-project-2.jpg";
+import project2 from "@/assets/Blown-In Attic Insulation.jpg";
 import project3 from "@/assets/old-site/mustang-project-3.jpg";
 import project4 from "@/assets/old-site/mustang-project-4.jpg";
 import project5 from "@/assets/old-site/mustang-project-5.jpg";
