@@ -14,6 +14,8 @@ import project9 from "@/assets/old-site/mustang-project-9.jpg";
 import project10 from "@/assets/old-site/mustang-project-10.jpg";
 import project11 from "@/assets/old-site/mustang-project-11.jpg";
 import project12 from "@/assets/old-site/mustang-project-12.jpg";
+import project13 from "@/assets/old-site/mustang-project-13.jpg";
+
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
