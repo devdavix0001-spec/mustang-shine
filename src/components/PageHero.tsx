@@ -21,14 +21,25 @@ export function PageHero({
         aria-hidden="true"
         className="absolute inset-0 size-full object-cover"
       />
-      <div className="photo-scrim absolute inset-0" />
+
+      {/* Darkened red-tinted overlay so white text stays readable over any photo */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-red-950/60 to-black/80" />
+      <div className="absolute inset-0 bg-black/30" />
+
       <div className="slash-texture absolute inset-0" />
+
       <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-28">
-        <p className="eyebrow text-red">{eyebrow}</p>
+        {/* Eyebrow as a red pill badge */}
+        <p className="eyebrow inline-block rounded-full bg-red-600 px-4 py-1.5 text-xs font-bold tracking-wide text-white uppercase sm:text-sm">
+          {eyebrow}
+        </p>
+
         <h1 className="mt-5 max-w-4xl text-5xl leading-[1.02] text-white uppercase sm:text-6xl lg:text-7xl">
           {title}
         </h1>
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/75 sm:text-lg">{body}</p>
+        <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
+          {body}
+        </p>
         {children && <div className="mt-8 flex flex-wrap gap-3">{children}</div>}
       </div>
     </section>
