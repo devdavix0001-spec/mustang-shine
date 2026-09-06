@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowLeft, ArrowRight, Phone } from "lucide-react";
 
 import project1 from "@/assets/old-site/mustang-project-1.jpg";
 import project2 from "@/assets/Blown-In Attic Insulation.jpg";
@@ -132,7 +132,16 @@ function ServiceDetailPage() {
         </a>
       </PageHero>
 
-      <section className="mx-auto max-w-7xl px-5 pt-10 sm:px-8 lg:pt-14">
+      <div className="mx-auto max-w-7xl px-5 pt-6 sm:px-8">
+        <Link
+          to="/services"
+          className="inline-flex items-center gap-2 font-display text-xs font-bold tracking-[0.14em] text-muted-foreground uppercase transition-colors hover:text-red"
+        >
+          <ArrowLeft className="size-4" /> Back to all services
+        </Link>
+      </div>
+
+      <section className="mx-auto max-w-7xl px-5 pt-6 sm:px-8 lg:pt-10">
         <div className="grid gap-3 md:grid-cols-[1.45fr_0.78fr]">
           <img
             src={images[0]}
@@ -275,6 +284,15 @@ function ServiceDetailPage() {
           </div>
         </div>
       </section>
+
+      <div className="mx-auto max-w-7xl px-5 pb-16 sm:px-8">
+        <Link
+          to="/services"
+          className="inline-flex items-center gap-2 font-display text-xs font-bold tracking-[0.14em] text-muted-foreground uppercase transition-colors hover:text-red"
+        >
+          <ArrowLeft className="size-4" /> Back to all services
+        </Link>
+      </div>
     </>
   );
 }
