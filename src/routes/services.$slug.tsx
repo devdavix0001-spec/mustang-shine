@@ -285,14 +285,6 @@ function ServiceDetailPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-7xl px-5 pb-16 sm:px-8">
-        <Link
-          to="/services"
-          className="inline-flex items-center gap-2 font-display text-xs font-bold tracking-[0.14em] text-muted-foreground uppercase transition-colors hover:text-red"
-        >
-          <ArrowLeft className="size-4" /> Back to all services
-        </Link>
-      </div>
     </>
   );
 }
