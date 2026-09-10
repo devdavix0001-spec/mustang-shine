@@ -8,12 +8,9 @@ import project4 from "@/assets/Spray Foam Insulation.jpg";
 import project5 from "@/assets/Insulation Removal.jpg";
 import project6 from "@/assets/atttic-1.jpg";
 import project7 from "@/assets/RadiantBarriers-1.jpg";
+import project8 from "@/assets/AtticEncapsulation-1.jpg";
 
 
-
-
-
-import project8 from "@/assets/old-site/mustang-project-8.jpg";
 import project9 from "@/assets/old-site/mustang-project-9.jpg";
 import project10 from "@/assets/old-site/mustang-project-10.jpg";
 import project11 from "@/assets/old-site/mustang-project-11.jpg";
