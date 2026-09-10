@@ -20,6 +20,15 @@ import project16 from "@/assets/atttic-3.jpg";
 import project17 from "@/assets/RadiantBarriers-1.jpg";
 import project18 from "@/assets/RadiantBarriers-2.jpg";
 import project19 from "@/assets/RadiantBarriers-1.jpg";
+import project20 from "@/assets/AtticEncapsulation-1.jpg";
+import project21 from "@/assets/AtticEncapsulation-2.jpg";
+import project22 from "@/assets/AtticEncapsulation-3.jpg";
+
+
+
+
+
+
 
 
 
@@ -36,7 +45,7 @@ const serviceImages: Record<string, string> = {
   "insulation-removal": project11,
   "attic-air-sealing": project14,
   "radiant-barriers": project17,
-  "attic-encapsulation": project7,
+  "attic-encapsulation": project20,
   "crawlspace-insulation": project8,
   "metal-building-insulation": project9,
   soundproofing: project10,
@@ -51,7 +60,7 @@ const serviceImageSets: Record<string, string[]> = {
   "insulation-removal": [project11, project12, project13],
   "attic-air-sealing": [project14, project15, project16],
   "radiant-barriers": [project17, project18, project19],
-  "attic-encapsulation": [project7, project1, project5],
+  "attic-encapsulation": [project20, project21, project22],
   "crawlspace-insulation": [project8, project11, project4],
   "metal-building-insulation": [project9, project10, project12],
   soundproofing: [project10, project6, project9],
