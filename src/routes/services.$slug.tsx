@@ -45,6 +45,17 @@ import project34 from "@/assets/re-as-3.jpg";
 
 
 
+import project35 from "@/assets/Ifpc-3.jpg";
+import project36 from "@/assets/Ifpc-2.jpg";
+import project37 from "@/assets/Ifpc-1.jpg";
+
+
+
+
+
+
+
+
 
 
 
@@ -79,7 +90,7 @@ const serviceImages: Record<string, string> = {
   "metal-building-insulation": project26,
   soundproofing: project29,
   "rodent-exclusion": project32,
-  "fire-protective-coatings": project12,
+  "fire-protective-coatings": project35,
 };
 
 const serviceImageSets: Record<string, string[]> = {
@@ -94,7 +105,7 @@ const serviceImageSets: Record<string, string[]> = {
   "metal-building-insulation": [project26, project27, project28],
   soundproofing: [project29, project30, project31],
   "rodent-exclusion": [project32, project33, project34],
-  "fire-protective-coatings": [project12, project9, project1],
+  "fire-protective-coatings": [project35, project36, project37],
 };
 
 export const Route = createFileRoute("/services/$slug")({
