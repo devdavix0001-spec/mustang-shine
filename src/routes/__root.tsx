@@ -9,7 +9,6 @@ import {
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
-import mustangLogo from "@/assets/Mustang_Logo.png";
 import appCss from "../styles.css?url";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
@@ -58,7 +57,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           >
             Try again
           </button>
-          <a
+          
             href="/"
             className="border border-input px-6 py-3 font-display text-xs font-bold tracking-[0.14em] text-foreground uppercase transition-colors hover:bg-accent"
           >
@@ -85,7 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Mustang Insulation Services" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:image", content: "https://mustanginsulation.com/assets/Mustang_Logo.png" },
+      { property: "og:image", content: "https://mustanginsulation.com/favicon.ico" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -96,7 +95,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap",
       },
-      { rel: "icon", href: mustangLogo, type: "image/png" },
+      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
     scripts: [
       {
@@ -153,7 +152,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 border-t border-ink-line bg-ink p-2 sm:hidden">
-          <a
+          
             href="tel:+18177701867"
             className="flex min-h-11 items-center justify-center gap-2 border border-ink-line font-display text-xs font-bold tracking-[0.12em] text-white uppercase"
           >
