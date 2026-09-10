@@ -28,6 +28,13 @@ import project23 from "@/assets/cpm-1.jpg";
 import project24 from "@/assets/cpm-2.jpg";
 import project25 from "@/assets/cpm-3.jpg";
 
+import project26 from "@/assets/mbw-1.jpg";
+import project27 from "@/assets/mbw-2.jpg";
+import project28 from "@/assets/mbw-3.jpg";
+
+
+
+
 
 
 
@@ -51,7 +58,7 @@ const serviceImages: Record<string, string> = {
   "radiant-barriers": project17,
   "attic-encapsulation": project20,
   "crawlspace-insulation": project23,
-  "metal-building-insulation": project9,
+  "metal-building-insulation": project26,
   soundproofing: project10,
   "rodent-exclusion": project11,
   "fire-protective-coatings": project12,
@@ -66,7 +73,7 @@ const serviceImageSets: Record<string, string[]> = {
   "radiant-barriers": [project17, project18, project19],
   "attic-encapsulation": [project20, project21, project22],
   "crawlspace-insulation": [project23, project24, project25],
-  "metal-building-insulation": [project9, project10, project12],
+  "metal-building-insulation": [project26, project27, project28],
   soundproofing: [project10, project6, project9],
   "rodent-exclusion": [project11, project4, project8],
   "fire-protective-coatings": [project12, project9, project1],
