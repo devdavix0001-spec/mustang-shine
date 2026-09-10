@@ -18,11 +18,15 @@ function NotFoundComponent() {
     <div className="flex min-h-[60vh] items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl text-foreground">404</h1>
+
         <div className="mx-auto mt-4 h-0.5 w-14 bg-red" />
+
         <h2 className="mt-4 text-xl text-foreground">Page not found</h2>
+
         <p className="mt-2 text-sm text-muted-foreground">
           The page you're looking for doesn't exist or has been moved.
         </p>
+
         <div className="mt-6">
           <Link
             to="/"
@@ -36,17 +40,28 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({
+  error,
+  reset,
+}: {
+  error: Error;
+  reset: () => void;
+}) {
   console.error(error);
+
   const router = useRouter();
 
   return (
     <div className="flex min-h-[60vh] items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl text-foreground">This page didn't load</h1>
+        <h1 className="text-xl text-foreground">
+          This page didn't load
+        </h1>
+
         <p className="mt-2 text-sm text-muted-foreground">
           Something went wrong on our end. Try refreshing or head back home.
         </p>
+
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
             onClick={() => {
@@ -57,74 +72,119 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
           >
             Try again
           </button>
-          
-            href="/"
+
+          <Link
+            to="/"
             className="border border-input px-6 py-3 font-display text-xs font-bold tracking-[0.14em] text-foreground uppercase transition-colors hover:bg-accent"
           >
             Go home
-          </a>
+          </Link>
         </div>
       </div>
     </div>
   );
 }
 
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Mustang Insulation Services | DFW Insulation Contractor" },
-      {
-        name: "description",
-        content:
-          "Locally owned insulation contractor serving Dallas-Fort Worth. Attic insulation, spray foam, air sealing, and commercial building-performance solutions with clear recommendations and professional installation.",
-      },
-      { name: "author", content: "Mustang Insulation Services" },
-      { property: "og:site_name", content: "Mustang Insulation Services" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:image", content: "https://mustanginsulation.com/favicon.ico" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "canonical", href: "https://mustanginsulation.com/" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap",
-      },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          name: "Mustang Insulation Services",
-          telephone: "+1-817-770-1867",
-          email: "info@mustanginsulation.com",
-          url: "https://mustanginsulation.com/",
-          areaServed: "Dallas-Fort Worth Metroplex, Texas",
-          knowsAbout: [
-            "Attic insulation",
-            "Spray foam insulation",
-            "Commercial insulation",
-            "Air sealing",
-          ],
-          description:
-            "Family-owned residential and commercial insulation contractor serving the Dallas-Fort Worth Metroplex.",
-        }),
-      },
-    ],
-  }),
-  shellComponent: RootShell,
-  component: RootComponent,
-  notFoundComponent: NotFoundComponent,
-  errorComponent: ErrorComponent,
-});
+export const Route =
+  createRootRouteWithContext<{ queryClient: QueryClient }>()({
+    head: () => ({
+      meta: [
+        {
+          charSet: "utf-8",
+        },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1",
+        },
+        {
+          title: "Mustang Insulation Services | DFW Insulation Contractor",
+        },
+        {
+          name: "description",
+          content:
+            "Locally owned insulation contractor serving Dallas-Fort Worth. Attic insulation, spray foam, air sealing, and commercial building-performance solutions with clear recommendations and professional installation.",
+        },
+        {
+          name: "author",
+          content: "Mustang Insulation Services",
+        },
+        {
+          property: "og:site_name",
+          content: "Mustang Insulation Services",
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          property: "og:image",
+          content: "https://mustanginsulation.com/favicon.ico",
+        },
+      ],
+
+      links: [
+        {
+          rel: "stylesheet",
+          href: appCss,
+        },
+        {
+          rel: "canonical",
+          href: "https://mustanginsulation.com/",
+        },
+        {
+          rel: "preconnect",
+          href: "https://fonts.googleapis.com",
+        },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossOrigin: "anonymous",
+        },
+        {
+          rel: "stylesheet",
+          href:
+            "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap",
+        },
+        {
+          rel: "icon",
+          href: "/favicon.ico",
+          type: "image/x-icon",
+        },
+      ],
+
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Mustang Insulation Services",
+            telephone: "+1-817-770-1867",
+            email: "info@mustanginsulation.com",
+            url: "https://mustanginsulation.com/",
+            areaServed: "Dallas-Fort Worth Metroplex, Texas",
+            knowsAbout: [
+              "Attic insulation",
+              "Spray foam insulation",
+              "Commercial insulation",
+              "Air sealing",
+            ],
+            description:
+              "Family-owned residential and commercial insulation contractor serving the Dallas-Fort Worth Metroplex.",
+          }),
+        },
+      ],
+    }),
+
+    shellComponent: RootShell,
+    component: RootComponent,
+    notFoundComponent: NotFoundComponent,
+    errorComponent: ErrorComponent,
+  });
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
@@ -132,6 +192,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
       </head>
+
       <body>
         {children}
         <Scripts />
@@ -147,17 +208,21 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <div className="flex min-h-screen flex-col">
         <Header />
+
         <main className="flex-1">
           {/* Required: nested routes render here. */}
           <Outlet />
         </main>
+
+        {/* Mobile sticky actions */}
         <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 border-t border-ink-line bg-ink p-2 sm:hidden">
-          
+          <a
             href="tel:+18177701867"
             className="flex min-h-11 items-center justify-center gap-2 border border-ink-line font-display text-xs font-bold tracking-[0.12em] text-white uppercase"
           >
             Call Mustang
           </a>
+
           <Link
             to="/contact"
             className="flex min-h-11 items-center justify-center bg-red font-display text-xs font-bold tracking-[0.12em] text-white uppercase"
@@ -165,6 +230,7 @@ function RootComponent() {
             Get an Estimate
           </Link>
         </div>
+
         <Footer />
       </div>
     </QueryClientProvider>
