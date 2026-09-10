@@ -38,6 +38,13 @@ import project30 from "@/assets/sp-2.jpg";
 import project31 from "@/assets/sp-3.jpg";
 
 
+import project32 from "@/assets/re-as-1.jpg";
+import project33 from "@/assets/re-as-2.jpg";
+import project34 from "@/assets/re-as-3.jpg";
+
+
+
+
 
 
 
@@ -71,7 +78,7 @@ const serviceImages: Record<string, string> = {
   "crawlspace-insulation": project23,
   "metal-building-insulation": project26,
   soundproofing: project29,
-  "rodent-exclusion": project11,
+  "rodent-exclusion": project32,
   "fire-protective-coatings": project12,
 };
 
@@ -86,7 +93,7 @@ const serviceImageSets: Record<string, string[]> = {
   "crawlspace-insulation": [project23, project24, project25],
   "metal-building-insulation": [project26, project27, project28],
   soundproofing: [project29, project30, project31],
-  "rodent-exclusion": [project11, project4, project8],
+  "rodent-exclusion": [project32, project33, project34],
   "fire-protective-coatings": [project12, project9, project1],
 };
 
