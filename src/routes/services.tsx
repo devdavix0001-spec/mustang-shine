@@ -12,7 +12,7 @@ import project8 from "@/assets/AtticEncapsulation-1.jpg";
 import project9 from "@/assets/cpm-1.jpg";
 import project10 from "@/assets/mbw-1.jpg";
 
-import project11 from "@/assets/old-site/mustang-project-11.jpg";
+import project11 from "@/assets/sp-1.jpg";
 import project12 from "@/assets/old-site/mustang-project-12.jpg";
 import project13 from "@/assets/old-site/mustang-project-13.jpg";
 
