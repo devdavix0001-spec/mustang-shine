@@ -1,5 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Building2, CheckCircle2, Home, Phone, ShieldCheck, Users } from "lucide-react";
+import {
+  ArrowRight,
+  Building2,
+  CheckCircle2,
+  Home,
+  Phone,
+  ShieldCheck,
+  Users,
+} from "lucide-react";
 
 import project1 from "@/assets/old-site/mustang-project-1.jpg";
 import project20 from "@/assets/old-site/mustang-project-20.jpg";
@@ -8,30 +16,122 @@ import { CtaBand } from "@/components/CtaBand";
 import { Reveal } from "@/components/Reveal";
 import { ServiceCard } from "@/components/ServiceCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
-import { cities, process, services, site, testimonials, trustPoints } from "@/lib/site";
+import {
+  cities,
+  process,
+  services,
+  site,
+  testimonials,
+  trustPoints,
+} from "@/lib/site";
+
+const SITE_URL = "https://mustang-shine.vercel.app";
+const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Insulation Contractor Dallas-Fort Worth | Mustang Insulation Services" },
+      {
+        title:
+          "Insulation Contractor Dallas-Fort Worth | Mustang Insulation Services",
+      },
+
       {
         name: "description",
         content:
           "Mustang Insulation Services provides residential and commercial insulation, spray foam, air sealing, and attic upgrades across Dallas-Fort Worth. Call 817-770-1867.",
       },
+
+      // Open Graph — WhatsApp, Facebook, LinkedIn, etc.
+      {
+        property: "og:site_name",
+        content: "Mustang Insulation Services",
+      },
+
+      {
+        property: "og:type",
+        content: "website",
+      },
+
       {
         property: "og:title",
-        content: "Insulation Contractor Dallas-Fort Worth | Mustang Insulation Services",
+        content:
+          "Insulation Contractor Dallas-Fort Worth | Mustang Insulation Services",
       },
+
       {
         property: "og:description",
         content:
           "DFW insulation contractor for homes and commercial buildings. Attic upgrades, spray foam, air sealing, and building-performance solutions designed to improve comfort and efficiency.",
       },
-      { property: "og:url", content: "/" },
+
+      {
+        property: "og:url",
+        content: SITE_URL,
+      },
+
+      {
+        property: "og:image",
+        content: OG_IMAGE,
+      },
+
+      {
+        property: "og:image:alt",
+        content: "Mustang Insulation Services — DFW Insulation Contractor",
+      },
+
+      {
+        property: "og:image:type",
+        content: "image/jpeg",
+      },
+
+      {
+        property: "og:image:width",
+        content: "1200",
+      },
+
+      {
+        property: "og:image:height",
+        content: "630",
+      },
+
+      // Twitter / X
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
+
+      {
+        name: "twitter:title",
+        content:
+          "Insulation Contractor Dallas-Fort Worth | Mustang Insulation Services",
+      },
+
+      {
+        name: "twitter:description",
+        content:
+          "DFW insulation contractor for homes and commercial buildings. Attic upgrades, spray foam, air sealing, and building-performance solutions.",
+      },
+
+      {
+        name: "twitter:image",
+        content: OG_IMAGE,
+      },
+
+      {
+        name: "twitter:image:alt",
+        content: "Mustang Insulation Services",
+      },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+
+    links: [
+      {
+        rel: "canonical",
+        href: SITE_URL,
+      },
+    ],
   }),
+
   component: Index,
 });
 
@@ -60,10 +160,18 @@ const why = [
 
 function Index() {
   const featuredServices = [
-    services.find((service) => service.slug === "blown-in-attic-insulation"),
-    services.find((service) => service.slug === "spray-foam-insulation"),
-    services.find((service) => service.slug === "attic-air-sealing"),
-    services.find((service) => service.slug === "metal-building-insulation"),
+    services.find(
+      (service) => service.slug === "blown-in-attic-insulation",
+    ),
+    services.find(
+      (service) => service.slug === "spray-foam-insulation",
+    ),
+    services.find(
+      (service) => service.slug === "attic-air-sealing",
+    ),
+    services.find(
+      (service) => service.slug === "metal-building-insulation",
+    ),
   ].filter(Boolean) as typeof services;
 
   return (
@@ -77,36 +185,43 @@ function Index() {
           height={1088}
         />
 
-        {/* Left-to-right gradient: dark on the left for text contrast, fades to transparent so the image shows on the right */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/95 from-10% via-black/70 via-40% to-transparent to-65%" />
         <div className="absolute inset-0 bg-gradient-to-r from-red-950/40 via-transparent to-transparent" />
 
         <div className="slash-texture absolute inset-0" />
+
         <div className="relative mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-36">
           <p className="eyebrow inline-block rounded-full bg-red-600 px-4 py-1.5 text-xs font-bold tracking-wide text-white uppercase sm:text-sm">
             Arlington · Fort Worth · Dallas
           </p>
+
           <h1 className="mt-6 max-w-4xl text-5xl leading-[1.02] text-white uppercase sm:text-6xl lg:text-7xl">
             Smarter insulation.
             <br />
             Better-performing spaces.
           </h1>
+
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
-            Residential and commercial insulation solutions engineered for comfort, efficiency, and
-            long-term building performance across Dallas-Fort Worth.
+            Residential and commercial insulation solutions engineered for
+            comfort, efficiency, and long-term building performance across
+            Dallas-Fort Worth.
           </p>
+
           <div className="mt-9 flex flex-wrap gap-3">
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 bg-red px-7 py-4 font-display text-sm font-bold tracking-[0.14em] text-white uppercase transition-colors hover:bg-red-dark"
             >
-              Get an Estimate <ArrowRight className="size-4" />
+              Get an Estimate
+              <ArrowRight className="size-4" />
             </Link>
+
             <a
               href={site.phoneHref}
               className="inline-flex items-center gap-2 border border-white/60 px-7 py-4 font-display text-sm font-bold tracking-[0.14em] text-white uppercase transition-colors hover:bg-white/10"
             >
-              <Phone className="size-4" strokeWidth={2.5} /> Call {site.phone}
+              <Phone className="size-4" strokeWidth={2.5} />
+              Call {site.phone}
             </a>
           </div>
         </div>
@@ -119,7 +234,10 @@ function Index() {
               key={point}
               className="flex items-center gap-2.5 font-display text-[0.72rem] font-bold tracking-[0.14em] text-white/80 uppercase"
             >
-              <CheckCircle2 className="size-4 shrink-0 text-red" strokeWidth={2.5} />
+              <CheckCircle2
+                className="size-4 shrink-0 text-red"
+                strokeWidth={2.5}
+              />
               {point}
             </li>
           ))}
@@ -129,12 +247,15 @@ function Index() {
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
         <Reveal>
           <p className="eyebrow text-red">What We Do</p>
+
           <h2 className="mt-4 max-w-3xl text-3xl leading-tight uppercase sm:text-4xl">
             Insulation services for homes and commercial buildings
           </h2>
+
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            From a single hot upstairs bedroom to a 40,000 sq ft metal building, we scope it, price
-            it honestly, and install it with experienced crews.
+            From a single hot upstairs bedroom to a 40,000 sq ft metal
+            building, we scope it, price it honestly, and install it with
+            experienced crews.
           </p>
         </Reveal>
 
@@ -167,25 +288,37 @@ function Index() {
               width={1600}
               height={1000}
             />
+
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 from-10% via-black/60 via-45% to-transparent to-80%" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
+
             <div className="relative flex min-h-80 flex-col justify-end p-8">
               <Home className="size-7 text-red" strokeWidth={2.5} />
-              <h3 className="mt-4 text-2xl text-white uppercase">Residential</h3>
+
+              <h3 className="mt-4 text-2xl text-white uppercase">
+                Residential
+              </h3>
+
               <p className="mt-3 max-w-md text-sm leading-relaxed text-white/75">
-                Attics, walls, crawlspaces, and pier-and-beam homes. We evaluate the home, air
-                leakage, and insulation condition before recommending the right approach.
+                Attics, walls, crawlspaces, and pier-and-beam homes. We
+                evaluate the home, air leakage, and insulation condition before
+                recommending the right approach.
               </p>
+
               <Link
                 to="/residential"
                 className="mt-6 inline-flex w-fit items-center gap-2 bg-red px-6 py-3 font-display text-xs font-bold tracking-[0.14em] text-white uppercase transition-colors hover:bg-red-dark"
               >
-                Residential services <ArrowRight className="size-4" />
+                Residential services
+                <ArrowRight className="size-4" />
               </Link>
             </div>
           </Reveal>
 
-          <Reveal delay={80} className="group relative isolate overflow-hidden">
+          <Reveal
+            delay={80}
+            className="group relative isolate overflow-hidden"
+          >
             <img
               src={project21}
               alt="Metal warehouse building insulated with spray foam and batt insulation"
@@ -194,20 +327,29 @@ function Index() {
               width={1600}
               height={1000}
             />
+
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 from-10% via-black/60 via-45% to-transparent to-80%" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
+
             <div className="relative flex min-h-80 flex-col justify-end p-8">
               <Building2 className="size-7 text-red" strokeWidth={2.5} />
-              <h3 className="mt-4 text-2xl text-white uppercase">Commercial</h3>
+
+              <h3 className="mt-4 text-2xl text-white uppercase">
+                Commercial
+              </h3>
+
               <p className="mt-3 max-w-md text-sm leading-relaxed text-white/75">
-                Metal buildings, warehouses, shops and offices. Soundproofing, fire-protective
-                coatings and phased schedules that keep you operating.
+                Metal buildings, warehouses, shops and offices. Soundproofing,
+                fire-protective coatings and phased schedules that keep you
+                operating.
               </p>
+
               <Link
                 to="/commercial"
                 className="mt-6 inline-flex w-fit items-center gap-2 bg-red px-6 py-3 font-display text-xs font-bold tracking-[0.14em] text-white uppercase transition-colors hover:bg-red-dark"
               >
-                Commercial services <ArrowRight className="size-4" />
+                Commercial services
+                <ArrowRight className="size-4" />
               </Link>
             </div>
           </Reveal>
@@ -218,17 +360,28 @@ function Index() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal>
             <p className="eyebrow text-red">Why Mustang</p>
+
             <h2 className="mt-4 max-w-3xl text-3xl leading-tight text-white uppercase sm:text-4xl">
               Building better spaces across DFW
             </h2>
           </Reveal>
+
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {why.map((item, i) => (
               <Reveal key={item.title} delay={i * 60}>
                 <div className="hover-lift h-full border border-ink-line bg-ink-soft p-7 hover:border-red">
-                  <item.icon className="size-6 text-red" strokeWidth={2.5} />
-                  <h3 className="mt-5 text-lg text-white">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/60">{item.body}</p>
+                  <item.icon
+                    className="size-6 text-red"
+                    strokeWidth={2.5}
+                  />
+
+                  <h3 className="mt-5 text-lg text-white">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-relaxed text-white/60">
+                    {item.body}
+                  </p>
                 </div>
               </Reveal>
             ))}
@@ -239,14 +392,19 @@ function Index() {
       <section className="bg-muted py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal>
-            <p className="eyebrow text-red">Mustang brand statement</p>
+            <p className="eyebrow text-red">
+              Mustang brand statement
+            </p>
+
             <h2 className="mt-4 max-w-4xl text-3xl uppercase sm:text-4xl">
               Not your typical insulation company.
             </h2>
+
             <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
-              Better processes. Better communication. Better workmanship. Better-performing spaces.
-              Mustang combines experienced crews, modern tools, and practical recommendations to
-              design insulation systems around the building instead of the lowest-cost shortcut.
+              Better processes. Better communication. Better workmanship.
+              Better-performing spaces. Mustang combines experienced crews,
+              modern tools, and practical recommendations to design insulation
+              systems around the building instead of the lowest-cost shortcut.
             </p>
           </Reveal>
         </div>
@@ -255,17 +413,31 @@ function Index() {
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
         <Reveal>
           <p className="eyebrow text-red">How It Works</p>
+
           <h2 className="mt-4 text-3xl uppercase sm:text-4xl">
             Inspect → Quote → Install → Warranty
           </h2>
         </Reveal>
+
         <ol className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {process.map((item, i) => (
-            <Reveal key={item.step} delay={i * 60} as="li">
+            <Reveal
+              key={item.step}
+              delay={i * 60}
+              as="li"
+            >
               <div className="border-t-2 border-red pt-5">
-                <span className="font-display text-3xl text-muted-foreground">{item.step}</span>
-                <h3 className="mt-2 text-xl uppercase">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                <span className="font-display text-3xl text-muted-foreground">
+                  {item.step}
+                </span>
+
+                <h3 className="mt-2 text-xl uppercase">
+                  {item.title}
+                </h3>
+
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {item.body}
+                </p>
               </div>
             </Reveal>
           ))}
@@ -276,10 +448,12 @@ function Index() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal>
             <p className="eyebrow text-red">Reviews</p>
+
             <h2 className="mt-4 text-3xl uppercase sm:text-4xl">
               Unmatched customer service with quality work
             </h2>
           </Reveal>
+
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {testimonials.map((t, i) => (
               <Reveal key={t.quote} delay={i * 60}>
@@ -287,6 +461,7 @@ function Index() {
               </Reveal>
             ))}
           </div>
+
           <div className="mt-10">
             <Link
               to="/reviews"
@@ -301,14 +476,18 @@ function Index() {
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
         <Reveal>
           <p className="eyebrow text-red">Service Area</p>
+
           <h2 className="mt-4 text-3xl uppercase sm:text-4xl">
             Serving the Dallas-Fort Worth Metroplex
           </h2>
+
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            Based in the Mid-Cities and working across Tarrant, Dallas and Denton counties. Don't
-            see your city? Call {site.phone} — chances are we're already nearby.
+            Based in the Mid-Cities and working across Tarrant, Dallas and
+            Denton counties. Don't see your city? Call {site.phone} — chances
+            are we're already nearby.
           </p>
         </Reveal>
+
         <ul className="mt-10 flex flex-wrap gap-2.5">
           {cities.map((city) => (
             <li
