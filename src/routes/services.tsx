@@ -9,7 +9,6 @@ import project5 from "@/assets/Insulation Removal.jpg";
 import project6 from "@/assets/atttic-1.jpg";
 
 
-import project6 from "@/assets/old-site/mustang-project-6.jpg";
 import project7 from "@/assets/old-site/mustang-project-7.jpg";
 import project8 from "@/assets/old-site/mustang-project-8.jpg";
 import project9 from "@/assets/old-site/mustang-project-9.jpg";
