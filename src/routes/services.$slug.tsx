@@ -50,7 +50,7 @@ const serviceImageSets: Record<string, string[]> = {
   "spray-foam-insulation": [project8, project9, project10],
   "insulation-removal": [project11, project12, project13],
   "attic-air-sealing": [project14, project15, project16],
-  "radiant-barriers": [project6, project10, project3],
+  "radiant-barriers": [project17, project18, project19],
   "attic-encapsulation": [project7, project1, project5],
   "crawlspace-insulation": [project8, project11, project4],
   "metal-building-insulation": [project9, project10, project12],
