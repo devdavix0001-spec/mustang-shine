@@ -70,7 +70,7 @@ const serviceImages: Record<string, string> = {
   "attic-encapsulation": project20,
   "crawlspace-insulation": project23,
   "metal-building-insulation": project26,
-  soundproofing: project10,
+  soundproofing: project29,
   "rodent-exclusion": project11,
   "fire-protective-coatings": project12,
 };
@@ -85,7 +85,7 @@ const serviceImageSets: Record<string, string[]> = {
   "attic-encapsulation": [project20, project21, project22],
   "crawlspace-insulation": [project23, project24, project25],
   "metal-building-insulation": [project26, project27, project28],
-  soundproofing: [project10, project6, project9],
+  soundproofing: [project29, project30, project31],
   "rodent-exclusion": [project11, project4, project8],
   "fire-protective-coatings": [project12, project9, project1],
 };
