@@ -17,6 +17,11 @@ import project13 from "@/assets/Insulation Removal-3.jpg";
 import project14 from "@/assets/atttic-1.jpg";
 import project15 from "@/assets/atttic-2.jpg";
 import project16 from "@/assets/atttic-3.jpg";
+import project17 from "@/assets/RadiantBarriers-1.jpg";
+import project18 from "@/assets/RadiantBarriers-2.jpg";
+import project19 from "@/assets/RadiantBarriers-1.jpg";
+
+
 
 
 
