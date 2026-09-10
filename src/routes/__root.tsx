@@ -13,6 +13,8 @@ import appCss from "../styles.css?url";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
+const SITE_URL = "https://mustang-shine.vercel.app";
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-[60vh] items-center justify-center bg-background px-4">
@@ -96,33 +98,83 @@ export const Route =
           name: "viewport",
           content: "width=device-width, initial-scale=1",
         },
+
+        // Global fallback title.
+        // Individual routes can override this with their own title.
         {
           title: "Mustang Insulation Services | DFW Insulation Contractor",
         },
+
+        // Global fallback description.
+        // Individual routes can override this with their own description.
         {
           name: "description",
           content:
-            "Locally owned insulation contractor serving Dallas-Fort Worth. Attic insulation, spray foam, air sealing, and commercial building-performance solutions with clear recommendations and professional installation.",
+            "Mustang Insulation Services provides residential and commercial insulation, spray foam, air sealing, and attic insulation solutions across the Dallas-Fort Worth Metroplex.",
         },
+
         {
           name: "author",
           content: "Mustang Insulation Services",
         },
+
         {
           property: "og:site_name",
           content: "Mustang Insulation Services",
         },
+
         {
           property: "og:type",
           content: "website",
         },
+
+        {
+          property: "og:title",
+          content:
+            "Mustang Insulation Services | DFW Insulation Contractor",
+        },
+
+        {
+          property: "og:description",
+          content:
+            "Residential and commercial insulation services across Dallas-Fort Worth, including attic insulation, spray foam, air sealing, and building-performance solutions.",
+        },
+
+        {
+          property: "og:url",
+          content: SITE_URL,
+        },
+
+        {
+          property: "og:image",
+          content: `${SITE_URL}/favicon.ico`,
+        },
+
+        {
+          property: "og:image:alt",
+          content: "Mustang Insulation Services",
+        },
+
         {
           name: "twitter:card",
           content: "summary_large_image",
         },
+
         {
-          property: "og:image",
-          content: "https://mustanginsulation.com/favicon.ico",
+          name: "twitter:title",
+          content:
+            "Mustang Insulation Services | DFW Insulation Contractor",
+        },
+
+        {
+          name: "twitter:description",
+          content:
+            "Residential and commercial insulation services across Dallas-Fort Worth.",
+        },
+
+        {
+          name: "twitter:image",
+          content: `${SITE_URL}/favicon.ico`,
         },
       ],
 
@@ -131,24 +183,29 @@ export const Route =
           rel: "stylesheet",
           href: appCss,
         },
+
         {
           rel: "canonical",
-          href: "https://mustanginsulation.com/",
+          href: SITE_URL,
         },
+
         {
           rel: "preconnect",
           href: "https://fonts.googleapis.com",
         },
+
         {
           rel: "preconnect",
           href: "https://fonts.gstatic.com",
           crossOrigin: "anonymous",
         },
+
         {
           rel: "stylesheet",
           href:
             "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap",
         },
+
         {
           rel: "icon",
           href: "/favicon.ico",
@@ -165,7 +222,7 @@ export const Route =
             name: "Mustang Insulation Services",
             telephone: "+1-817-770-1867",
             email: "info@mustanginsulation.com",
-            url: "https://mustanginsulation.com/",
+            url: SITE_URL,
             areaServed: "Dallas-Fort Worth Metroplex, Texas",
             knowsAbout: [
               "Attic insulation",
