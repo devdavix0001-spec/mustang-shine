@@ -14,7 +14,7 @@ import project10 from "@/assets/mbw-1.jpg";
 
 import project11 from "@/assets/sp-1.jpg";
 import project12 from "@/assets/re-as-1.jpg";
-import project13 from "@/assets/old-site/mustang-project-13.jpg";
+import project13 from "@/assets/Ifpc-2.jpg";
 
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
