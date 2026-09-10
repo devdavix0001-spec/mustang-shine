@@ -33,6 +33,17 @@ import project27 from "@/assets/mbw-2.jpg";
 import project28 from "@/assets/mbw-3.jpg";
 
 
+import project29 from "@/assets/sp-1.jpg";
+import project30 from "@/assets/sp-2.jpg";
+import project31 from "@/assets/sp-3.jpg";
+
+
+
+
+
+
+
+
 
 
 
