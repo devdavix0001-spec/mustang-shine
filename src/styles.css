@@ -1,0 +1,219 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Mustang Insulation Services design system.
+ * Black + white carry ~90% of the visual weight. Red (#C8102E) is an accent only.
+ * Headlines: Space Grotesk Bold. Body: IBM Plex Sans.
+ */
+
+@theme inline {
+  --radius-sm: 2px;
+  --radius-md: 3px;
+  --radius-lg: 4px;
+  --radius-xl: 6px;
+  --radius-2xl: 8px;
+
+  --font-display: "Space Grotesk", "Arial Narrow", sans-serif;
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-line: var(--ink-line);
+  --color-red: var(--red);
+  --color-red-dark: var(--red-dark);
+  --color-gray-brand: var(--gray-brand);
+}
+
+:root {
+  --radius: 3px;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.16 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.16 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.16 0 0);
+  --primary: oklch(0.5 0.203 26.5);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.16 0 0);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.96 0 0);
+  --muted-foreground: oklch(0.52 0 0);
+  --accent: oklch(0.96 0 0);
+  --accent-foreground: oklch(0.16 0 0);
+  --destructive: oklch(0.5 0.203 26.5);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.9 0 0);
+  --input: oklch(0.88 0 0);
+  --ring: oklch(0.5 0.203 26.5);
+
+  --ink: oklch(0.15 0 0);
+  --ink-soft: oklch(0.21 0 0);
+  --ink-line: oklch(1 0 0 / 12%);
+  --red: oklch(0.5 0.203 26.5);
+  --red-dark: oklch(0.43 0.18 26.5);
+  --gray-brand: oklch(0.52 0 0);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Section eyebrow label: technical, wide-tracked, red rule */
+@utility eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  &::before {
+    content: "";
+    width: 1.75rem;
+    height: 2px;
+    background: var(--red);
+  }
+}
+
+/* Faint diagonal slash texture for dark sections */
+@utility slash-texture {
+  background-image: repeating-linear-gradient(
+    115deg,
+    transparent 0 22px,
+    oklch(1 0 0 / 6%) 22px 23px
+  );
+}
+
+@utility slash-texture-red {
+  background-image: repeating-linear-gradient(
+    115deg,
+    transparent 0 26px,
+    oklch(1 0 0 / 10%) 26px 28px
+  );
+}
+
+/* Photo overlay: heavier at the bottom for text legibility */
+@utility photo-scrim {
+  background-image: linear-gradient(
+    to bottom,
+    oklch(0.15 0 0 / 12%) 0%,
+    oklch(0.15 0 0 / 28%) 38%,
+    oklch(0.15 0 0 / 62%) 100%
+  );
+}
+
+@utility link-underline {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 100%;
+    background: var(--red);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+
+  &:hover::after,
+  &[data-status="active"]::after {
+    transform: scaleX(1);
+  }
+}
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.35s ease-out,
+    transform 0.35s ease-out;
+
+  &[data-visible="true"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility hover-lift {
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.18s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
