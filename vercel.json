@@ -1,0 +1,7 @@
+{
+  "redirects": [
+    { "source": "/estimate", "destination": "/contact", "permanent": true },
+    { "source": "/request-estimate", "destination": "/contact", "permanent": true },
+    { "source": "/get-an-estimate", "destination": "/contact", "permanent": true }
+  ]
+}
