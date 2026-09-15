@@ -11,9 +11,8 @@ import project7 from "@/assets/Fiberglass Batt Insulation-3.jpg";
 import project8 from "@/assets/Spray Foam Insulation.jpg";
 import project9 from "@/assets/Spray Foam Insulation-2.jpg";
 import project10 from "@/assets/Spray Foam Insulation-3.jpg";
-import project11 from "@/assets/Insulation Removal.jpg";
-import project12 from "@/assets/Insulation Removal-2.jpg";
-import project13 from "@/assets/Insulation Removal-3.jpg";
+import project11 from "@/assets/insulation-removal-main.jpg";
+
 import project14 from "@/assets/atttic-1.jpg";
 import project15 from "@/assets/atttic-2.jpg";
 import project16 from "@/assets/atttic-3.jpg";
@@ -67,7 +66,7 @@ const serviceImageSets: Record<string, string[]> = {
   "blown-in-attic-insulation": [project2, project3, project4],
   "fiberglass-batt-insulation": [project5, project6, project7],
   "spray-foam-insulation": [project8, project9, project10],
-  "insulation-removal": [project11, project12, project13],
+  "insulation-removal": [project11],
   "attic-air-sealing": [project14, project15, project16],
   "radiant-barriers": [project17, project18, project19],
   "attic-encapsulation": [project20, project21, project22],
