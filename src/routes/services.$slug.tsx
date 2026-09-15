@@ -19,9 +19,8 @@ import project16 from "@/assets/atttic-3.jpg";
 import project17 from "@/assets/RadiantBarriers-1.jpg";
 import project18 from "@/assets/RadiantBarriers-2.jpg";
 import project19 from "@/assets/RadiantBarriers-1.jpg";
-import project20 from "@/assets/AtticEncapsulation-1.jpg";
-import project21 from "@/assets/AtticEncapsulation-2.jpg";
-import project22 from "@/assets/AtticEncapsulation-3.jpg";
+import project20 from "@/assets/attic-encapsulation.jpg";
+
 
 import project23 from "@/assets/cpm-1.jpg";
 import project24 from "@/assets/cpm-2.jpg";
@@ -69,7 +68,7 @@ const serviceImageSets: Record<string, string[]> = {
   "insulation-removal": [project11],
   "attic-air-sealing": [project14, project15, project16],
   "radiant-barriers": [project17, project18, project19],
-  "attic-encapsulation": [project20, project21, project22],
+  "attic-encapsulation": [project20],
   "crawlspace-insulation": [project23, project24, project25],
   "metal-building-insulation": [project26, project27, project28],
   soundproofing: [project29, project30, project31],
