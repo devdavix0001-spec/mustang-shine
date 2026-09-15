@@ -30,9 +30,8 @@ import project26 from "@/assets/mbw-1.jpg";
 import project27 from "@/assets/mbw-2.jpg";
 import project28 from "@/assets/mbw-3.jpg";
 
-import project29 from "@/assets/sp-1.jpg";
-import project30 from "@/assets/sp-2.jpg";
-import project31 from "@/assets/sp-3.jpg";
+import project29 from "@/assets/sound-proofing.jpeg";
+
 
 import project32 from "@/assets/re-as-1.jpg";
 import project33 from "@/assets/re-as-2.jpg";
@@ -71,7 +70,7 @@ const serviceImageSets: Record<string, string[]> = {
   "attic-encapsulation": [project20],
   "crawlspace-insulation": [project23, project24, project25],
   "metal-building-insulation": [project26, project27, project28],
-  soundproofing: [project29, project30, project31],
+  soundproofing: [project29],
   "rodent-exclusion": [project32, project33, project34],
   "fire-protective-coatings": [project35, project36, project37],
 };
