@@ -21,18 +21,17 @@ export function QuoteForm({ dark = false }: { dark?: boolean }) {
     script.dataset.target = "qiq-form";
     script.onload = () => setLoaded(true);
     document.body.appendChild(script);
-
-    // don't remove on unmount — keep it cached for next visit
   }, []);
 
   return (
     <div
       className={`w-full border p-4 sm:p-6 ${dark ? "border-ink-line bg-ink-soft" : "border-border bg-card"}`}
     >
-      <div id="qiq-form" className="min-h-24 w-full">
+      <div id="qiq-form" className="relative min-h-24 w-full">
         {!loaded && (
-          <div className="flex h-24 w-full animate-pulse items-center justify-center text-sm text-muted-foreground">
-            Loading quote form…
+          <div className="flex h-24 w-full flex-col items-center justify-center gap-2 text-sm text-muted-foreground">
+            <div className="size-5 animate-spin rounded-full border-2 border-current border-t-transparent" />
+            <span>Loading quote form…</span>
           </div>
         )}
       </div>
