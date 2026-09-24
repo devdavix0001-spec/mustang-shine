@@ -4,7 +4,9 @@ const QUOTEIQ_SCRIPT_SRC = "https://quoteiq-2.web.app/widget/v2/widget.js";
 
 export function QuoteForm({ dark = false }: { dark?: boolean }) {
   const [loaded, setLoaded] = useState(
-    () => typeof document !== "undefined" && !!document.querySelector(`script[src="${QUOTEIQ_SCRIPT_SRC}"]`),
+    () =>
+      typeof document !== "undefined" &&
+      !!document.querySelector(`script[src="${QUOTEIQ_SCRIPT_SRC}"]`),
   );
 
   useEffect(() => {
