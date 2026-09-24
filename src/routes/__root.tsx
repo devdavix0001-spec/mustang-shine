@@ -194,6 +194,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
 
       {
+        rel: "preconnect",
+        href: "https://quoteiq-2.web.app",
+        crossOrigin: "anonymous",
+      },
+
+      {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap",
       },
@@ -291,7 +297,7 @@ function RootComponent() {
 
         {/* Mobile sticky actions */}
         <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 border-t border-ink-line bg-ink p-2 sm:hidden">
-          <a
+          
             href="tel:+18177701867"
             className="flex min-h-11 items-center justify-center gap-2 border border-ink-line font-display text-xs font-bold tracking-[0.12em] text-white uppercase"
           >
