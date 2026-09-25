@@ -15,9 +15,15 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
 const SITE_URL = "https://mustanginsulation.com";
-const GA4_MEASUREMENT_ID = import.meta.env["VITE_GA_MEASUREMENT_ID"] as string | undefined;
-const SEARCH_CONSOLE_VERIFICATION = import.meta.env["VITE_GOOGLE_SITE_VERIFICATION"] as
-  string | undefined;
+
+const GA4_MEASUREMENT_ID = import.meta.env[
+  "VITE_GA_MEASUREMENT_ID"
+] as string | undefined;
+
+const SEARCH_CONSOLE_VERIFICATION = import.meta.env[
+  "VITE_GOOGLE_SITE_VERIFICATION"
+] as string | undefined;
+
 const STAGING_NO_INDEX = import.meta.env["VITE_NO_INDEX"] === "true";
 
 function NotFoundComponent() {
@@ -47,7 +53,13 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({
+  error,
+  reset,
+}: {
+  error: Error;
+  reset: () => void;
+}) {
   console.error(error);
 
   const router = useRouter();
@@ -84,7 +96,9 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+export const Route = createRootRouteWithContext<{
+  queryClient: QueryClient;
+}>()({
   head: () => ({
     meta: [
       {
@@ -96,13 +110,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
 
       // Global fallback title.
-      // Individual routes can override this with their own title.
       {
         title: "Mustang Insulation Services | DFW Insulation Contractor",
       },
 
       // Global fallback description.
-      // Individual routes can override this with their own description.
       {
         name: "description",
         content:
@@ -162,13 +174,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
       {
         name: "twitter:description",
-        content: "Residential and commercial insulation services across Dallas-Fort Worth.",
+        content:
+          "Residential and commercial insulation services across Dallas-Fort Worth.",
       },
 
       {
         name: "twitter:image",
         content: `${SITE_URL}/favicon.ico`,
       },
+
+      ...(SEARCH_CONSOLE_VERIFICATION
+        ? [
+            {
+              name: "google-site-verification",
+              content: SEARCH_CONSOLE_VERIFICATION,
+            },
+          ]
+        : []),
+
+      ...(STAGING_NO_INDEX
+        ? [
+            {
+              name: "robots",
+              content: "noindex,nofollow",
+            },
+          ]
+        : []),
     ],
 
     links: [
@@ -268,21 +299,33 @@ function RootComponent() {
   useEffect(() => {
     const handleConversionClick = (event: MouseEvent) => {
       if (!GA4_MEASUREMENT_ID) return;
+
       const target = (event.target as HTMLElement).closest("a");
+
       if (!target) return;
+
       const href = target.getAttribute("href") ?? "";
       const text = target.textContent?.trim().toLowerCase() ?? "";
+
       const eventName = href.startsWith("tel:")
         ? "phone_click"
         : text.includes("get an estimate")
           ? "estimate_cta_click"
           : null;
+
       if (eventName) {
-        window.gtag?.(eventName, { link_url: href, link_text: text });
+        window.gtag?.(eventName, {
+          link_url: href,
+          link_text: text,
+        });
       }
     };
+
     document.addEventListener("click", handleConversionClick);
-    return () => document.removeEventListener("click", handleConversionClick);
+
+    return () => {
+      document.removeEventListener("click", handleConversionClick);
+    };
   }, []);
 
   return (
@@ -291,13 +334,12 @@ function RootComponent() {
         <Header />
 
         <main className="flex-1">
-          {/* Required: nested routes render here. */}
           <Outlet />
         </main>
 
         {/* Mobile sticky actions */}
         <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 border-t border-ink-line bg-ink p-2 sm:hidden">
-          
+          <a
             href="tel:+18177701867"
             className="flex min-h-11 items-center justify-center gap-2 border border-ink-line font-display text-xs font-bold tracking-[0.12em] text-white uppercase"
           >
