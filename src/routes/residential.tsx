@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Phone, ThermometerSun, Wallet, Wind } from "lucide-react";
 
-import residential1 from "@/assets/Residential/New multi family build - 17 unit condos Arlington/Nmf-7.png";
+import residential1 from "@/assets/atttic-1.jpg";
 import residential2 from "@/assets/Residential/residential-2.png";
 import residential3 from "@/assets/Residential/residential-3.png";
 import residential4 from "@/assets/Residential/residential-4.png";
