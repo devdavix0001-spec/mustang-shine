@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Building2, CheckCircle2, Home, Phone, ShieldCheck, Users } from "lucide-react";
 
-import project1 from "@/assets/old-site/mustang-project-1.jpg";
+import project1 from "@/assets/Residential/New Construction - Open Cell/New Construction - Open Cell-6.jpg";
 import project20 from "@/assets/old-site/mustang-project-20.jpg";
 import project21 from "@/assets/old-site/mustang-project-21.jpg";
 import { CtaBand } from "@/components/CtaBand";
