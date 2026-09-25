@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import aboutImage from "@/assets/old-site/mustang-project-13.jpg";
+import aboutImage from "@/assets/Spray Foam Insulation-3.jpg";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
