@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Phone } from "lucide-react";
 
-import project1 from "@/assets/old-site/mustang-project-1.jpg";
+import project1 from "@/assets/Blown-In Attic Insulation-2.jpg";
 import project2 from "@/assets/Blown-In Attic Insulation.jpg";
 import project3 from "@/assets/Blown-In Attic Insulation-2.jpg";
 import project4 from "@/assets/Blown-In Attic Insulation-3.jpg";
@@ -11,7 +11,7 @@ import project7 from "@/assets/Fiberglass Batt Insulation-3.jpg";
 import project8 from "@/assets/Spray Foam Insulation.jpg";
 import project9 from "@/assets/Spray Foam Insulation-2.jpg";
 import project10 from "@/assets/Spray Foam Insulation-3.jpg";
-import project11 from "@/assets/insulation-removal-main.jpg";
+import project11 from "@/assets/Insulation Removal.jpg";
 
 import project14 from "@/assets/atttic-1.jpg";
 import project15 from "@/assets/atttic-2.jpg";
@@ -21,7 +21,6 @@ import project18 from "@/assets/RadiantBarriers-2.jpg";
 import project19 from "@/assets/RadiantBarriers-1.jpg";
 import project20 from "@/assets/attic-encapsulation.jpg";
 
-
 import project23 from "@/assets/cpm-1.jpg";
 import project24 from "@/assets/cpm-2.jpg";
 import project25 from "@/assets/cpm-3.jpg";
@@ -30,8 +29,7 @@ import project26 from "@/assets/mbw-1.jpg";
 import project27 from "@/assets/mbw-2.jpg";
 import project28 from "@/assets/mbw-3.jpg";
 
-import project29 from "@/assets/sound-proofing.jpeg";
-
+import project29 from "@/assets/sp-3.jpg";
 
 import project32 from "@/assets/re-as-1.jpg";
 import project33 from "@/assets/re-as-2.jpg";
