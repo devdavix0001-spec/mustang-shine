@@ -20,6 +20,9 @@ export function PageHero({
         alt=""
         aria-hidden="true"
         className="absolute inset-0 size-full object-cover"
+        loading="eager"
+        decoding="async"
+        fetchPriority="high"
       />
 
       {/* Left-to-right gradient: dark/red on the left for text contrast, fades out so the image shows on the right */}
@@ -37,9 +40,7 @@ export function PageHero({
         <h1 className="mt-5 max-w-4xl text-5xl leading-[1.02] text-white uppercase sm:text-6xl lg:text-7xl">
           {title}
         </h1>
-        <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
-          {body}
-        </p>
+        <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">{body}</p>
         {children && <div className="mt-8 flex flex-wrap gap-3">{children}</div>}
       </div>
     </section>
