@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { CalendarClock, Flame, Ruler, Volume2 } from "lucide-react";
 
-import commercialImg from "@/assets/old-site/mustang-project-19.jpg";
+import commercialImg from "@/assets/Commercial/Bauman Springs/Bauman Springs-1.jpg";
 
 import amazon1 from "@/assets/Commercial/Amazon/Amazon-1.jpg";
 import amazon2 from "@/assets/Commercial/Amazon/Amazon-2.jpg";
