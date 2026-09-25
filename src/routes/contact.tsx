@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ExternalLink, Facebook, Globe, Instagram, Mail, MapPin, Phone } from "lucide-react";
 
-import contactImage from "@/assets/old-site/mustang-project-14.jpg";
+import contactImage from "@/assets/Insulation Removal.jpg";
 import { PageHero } from "@/components/PageHero";
 import { QuoteForm } from "@/components/QuoteForm";
 import { Reveal } from "@/components/Reveal";
