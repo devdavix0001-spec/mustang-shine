@@ -6,7 +6,7 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 
 // Residential
-import residential1 from "@/assets/Residential/residential-1.png";
+import residential1 from "@/assets/atttic-1.jpg";
 import residential2 from "@/assets/Residential/residential-2.png";
 import residential3 from "@/assets/Residential/residential-3.png";
 import residential4 from "@/assets/Residential/residential-4.png";
