@@ -1,7 +1,7 @@
 import { createFileRoute, Link, Outlet, useLocation } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
-import servicesImage from "@/assets/old-site/mustang-project-17.jpg";
+import servicesImage from "@/assets/Blown-In Attic Insulation-2.jpg";
 import project2 from "@/assets/Blown-In Attic Insulation.jpg";
 import project3 from "@/assets/Fiberglass Batt Insulation.jpg";
 import project4 from "@/assets/Spray Foam Insulation.jpg";
