@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { CtaBand } from "@/components/CtaBand";
 import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
-import serviceAreasImage from "@/assets/old-site/mustang-project-16.jpg";
+import serviceAreasImage from "@/assets/mbw-1.jpg";
 import { cities, site } from "@/lib/site";
 
 export const Route = createFileRoute("/service-areas")({
