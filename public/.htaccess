@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Keep real files and directories available as-is.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Let TanStack Router handle direct visits to client-side routes.
+RewriteRule ^ index.html [L]
