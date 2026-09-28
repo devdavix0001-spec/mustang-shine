@@ -1,10 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 
 const QUOTEIQ_SCRIPT_SRC = "https://quoteiq-2.web.app/widget/v2/widget.js";
 
 export function QuoteForm({ dark = false }: { dark?: boolean }) {
   const [status, setStatus] = useState<"loading" | "ready" | "error">("loading");
   const targetRef = useRef<HTMLDivElement>(null);
+  const targetId = `qiq-form-${useId().replaceAll(":", "")}`;
 
   useEffect(() => {
     const target = targetRef.current;
@@ -21,11 +22,6 @@ export function QuoteForm({ dark = false }: { dark?: boolean }) {
       );
     };
 
-    if (hasRealContent()) {
-      setStatus("ready");
-      return;
-    }
-
     const checkTimer = window.setInterval(() => {
       if (hasRealContent()) {
         setStatus("ready");
@@ -38,21 +34,23 @@ export function QuoteForm({ dark = false }: { dark?: boolean }) {
       window.clearInterval(checkTimer);
     }, 15000);
 
-    if (!document.querySelector(`script[src="${QUOTEIQ_SCRIPT_SRC}"]`)) {
-      const script = document.createElement("script");
-      script.src = QUOTEIQ_SCRIPT_SRC;
-      script.async = true;
-      script.dataset.formId = "vD5nsAWUKjlRNX5Ocg3l";
-      script.dataset.mode = "inline";
-      script.dataset.target = "qiq-form";
-      document.body.appendChild(script);
-    }
+    // The widget bootstraps only once per script element. A route change can
+    // leave the old script in <body>, so reusing it would leave this new target
+    // empty until a full page reload. Create a fresh instance for each mount.
+    const script = document.createElement("script");
+    script.src = QUOTEIQ_SCRIPT_SRC;
+    script.async = true;
+    script.dataset.formId = "vD5nsAWUKjlRNX5Ocg3l";
+    script.dataset.mode = "inline";
+    script.dataset.target = targetId;
+    document.body.appendChild(script);
 
     return () => {
       window.clearInterval(checkTimer);
       window.clearTimeout(failTimer);
+      script.remove();
     };
-  }, []);
+  }, [targetId]);
 
   return (
     <div
@@ -88,7 +86,7 @@ export function QuoteForm({ dark = false }: { dark?: boolean }) {
           </div>
         )}
 
-        <div id="qiq-form" ref={targetRef} className="w-full" />
+        <div id={targetId} ref={targetRef} className="w-full" />
       </div>
     </div>
   );
