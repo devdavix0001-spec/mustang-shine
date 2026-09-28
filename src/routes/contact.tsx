@@ -60,6 +60,22 @@ function ContactPage() {
         image={contactImage}
       />
 
+      <section className="mx-auto w-full max-w-7xl px-5 py-12 sm:px-8 lg:py-16">
+        <Reveal>
+          <div className="border border-border bg-muted p-4 sm:p-8">
+            <p className="eyebrow text-red">Request an estimate</p>
+            <h2 className="mt-4 text-2xl uppercase sm:text-3xl">Tell us what you’re working on</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              We’ll evaluate the space, recommend the right insulation system, and provide a clear
+              written quote.
+            </p>
+            <div className="mt-7">
+              <QuoteForm />
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-8 lg:py-24">
         <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
           <Reveal>
@@ -149,22 +165,6 @@ function ContactPage() {
             </div>
           </Reveal>
         </div>
-      </section>
-
-      <section className="mx-auto w-full max-w-7xl px-5 pb-20 sm:px-8 lg:pb-24">
-        <Reveal>
-          <div className="border border-border bg-muted p-4 sm:p-8">
-            <p className="eyebrow text-red">Request an estimate</p>
-            <h2 className="mt-4 text-2xl uppercase sm:text-3xl">Tell us what you’re working on</h2>
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              We’ll evaluate the space, recommend the right insulation system, and provide a clear
-              written quote.
-            </p>
-            <div className="mt-7">
-              <QuoteForm />
-            </div>
-          </div>
-        </Reveal>
       </section>
 
       <section className="border-y border-border bg-ink py-16 text-white lg:py-20">
